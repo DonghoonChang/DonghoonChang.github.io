@@ -1,4 +1,178 @@
-* {
-  padding: 0px;
-  margin: 0px;
+@import "color", "font", "border", "animation";
+
+/* Debug */
+.identify-red {
+  border: 1.5px red dashed;
+}
+
+.identify-blue {
+  border: 1.5px blue dashed;
+}
+
+.identify-green {
+  border: 1.5px green dashed;
+}
+
+/* Logo bar */
+#logobar{
+
+  height: 100px;
+}
+
+#logobox {
+
+  @include bg-color($black);
+}
+
+#logobox:hover{
+
+  @include animation-forward(expand, 0s, 0.6s);
+
+  .logocharA{
+
+    @include color($graffiti-pink);
+  }
+
+  .logocharB{
+
+    @include color($graffiti-orange);
+  }
+
+  .logocharC{
+
+    @include color($graffiti-green);
+  }
+
+  .logocharD{
+
+    @include color($graffiti-neon-blue);
+  }
+
+  .logocharE{
+    @include color($graffiti-sky-blue);
+  }
+
+  .logocharF{
+
+    @include color($graffiti-red);
+  }
+}
+
+#logotext {
+
+  @include color($white);
+  text-decoration: none;
+}
+
+/* Nav Bar */
+#navbar {
+}
+
+.nav-item:hover {
+  border: 0.1px gray solid;
+  -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+}
+
+/* Middle */
+/* Carousel */
+$carousel-height: 450px;
+$perspective: 500px;
+
+#carousel{
+
+  .carousel-item{
+
+    height: $carousel-height;
+  }
+  .carousel-item img{
+
+    height: $carousel-height;
+  }
+}
+
+#carousel-space{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(225,225,225,0.2);
+  perspective: $perspective;
+}
+
+.carousel-wall{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border: 1px black solid;
+  box-shadow: inset 0 0 1px 1px gray;
+  //backface-visibility: hidden;
+}
+
+#carousel-wall-top{
+  padding-top: 100%;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+
+  background-image: linear-gradient(white, lightgray);
+}
+
+#carousel-wall-right{
+
+  transform-origin: right center;
+  transform: rotateY(-90deg);
+
+  background-image: linear-gradient(-90deg, white, lightgray);
+}
+
+#carousel-wall-bottom{
+  top: 100%;
+  padding-top: 100%;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+
+  background-image: linear-gradient(white, lightgray);
+}
+
+#carousel-wall-left{
+
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  background-image: linear-gradient(90deg, white, lightgray);
+}
+
+#carousel-wall-middle{
+
+  z-index: -1;
+  transform: scale(3, 3) translateZ(-1300px);
+  background: lightgray;
+}
+
+.carousel-item{
+  perspective: 750px;
+  transform: translateZ(-750px);
+
+}
+.carousel-img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-size: cover;
+  background-position: center;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  @include animation-repeat(rotateY, 0s, 5s);
+  animation-timing-function: linear;
+}
+
+.carousel-caption{
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Bottom */
+#about-me{
+  height: 275px;
+  @include bg-color($graffiti-light-grey);
 }

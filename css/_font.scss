@@ -5,8 +5,6 @@ $cabin: 'cabinregular';
     font-family: 'permanent_markerregular';
     src: url('../font/Permanent_Marker/permanentmarker-regular-webfont.woff2') format('woff2'),
          url('../font/Permanent_Marker/permanentmarker-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
 }
 
@@ -14,21 +12,41 @@ $cabin: 'cabinregular';
     font-family: 'cabinregular';
     src: url('../font/Cabin/cabin-regular-webfont.woff2') format('woff2'),
          url('../font/Cabin/cabin-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
 }
 
+@mixin font($font){
+  font-family: $font, serif;
+}
 
-.text-marker {
+@mixin font-weight($value){
+  font-weight: $value;
+}
+
+.font-marker {
   font-family: $marker, serif;
 }
 
-.text-cabin {
+.font-cabin {
   font-family: $cabin, serif;
 }
 
-.text-1_125em{
+.font-0_25em{
+  font-size: 0.25em;
+}
+
+.font-0_5em{
+  font-size: 0.5em;
+}
+
+.font-0_75em{
+  font-size: 0.75em;
+}
+
+.font-1em{
+  font-size: 1em;
+}
+
+.font-1_125em{
   font-size: 1.125em;
 }
 
@@ -36,26 +54,34 @@ $cabin: 'cabinregular';
   font-size: 1.25em;
 }
 
-.text-1_375em{
+.font-1_375em{
   font-size: 1.375em;
 }
 
-.text-1_5em{
+.font-1_5em{
   font-size: 1.5em;
 }
 
-.text-1_625em{
+.font-1_625em{
   font-size: 1.625em;
 }
 
-.text-1_75em{
+.font-1_75em{
   font-size: 1.75em;
 }
 
-.text-1_875em{
+.font-1_875em{
   font-size: 1.875em;
 }
 
-.text-2em{
+.font-2em{
   font-size: 2em;
+}
+
+.font-2_5em{
+  font-size: 2.5em;
+}
+
+.font-3em{
+  font-size: 3em;
 }

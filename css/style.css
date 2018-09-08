@@ -1,0 +1,256 @@
+/* Graffiti Colors */
+.bg-black {
+  background-color: #1D1D1D; }
+
+.bg-pitch-black {
+  background-color: #000000; }
+
+.bg-half-transparent {
+  opacity: 0.5; }
+
+.font-black {
+  color: #1D1D1D; }
+
+.font-pitch-black {
+  color: #000000; }
+
+.font-white {
+  color: #FFFFFF; }
+
+.font-dark-grey {
+  color: #43423E; }
+
+.font-grey {
+  color: #919190; }
+
+.font-bright-orange {
+  color: #FDC566; }
+
+@font-face {
+  font-family: 'permanent_markerregular';
+  src: url("../font/Permanent_Marker/permanentmarker-regular-webfont.woff2") format("woff2"), url("../font/Permanent_Marker/permanentmarker-regular-webfont.woff") format("woff"); }
+@font-face {
+  font-family: 'cabinregular';
+  src: url("../font/Cabin/cabin-regular-webfont.woff2") format("woff2"), url("../font/Cabin/cabin-regular-webfont.woff") format("woff"); }
+.font-marker {
+  font-family: "permanent_markerregular", serif; }
+
+.font-cabin {
+  font-family: "cabinregular", serif; }
+
+.font-0_25em {
+  font-size: 0.25em; }
+
+.font-0_5em {
+  font-size: 0.5em; }
+
+.font-0_75em {
+  font-size: 0.75em; }
+
+.font-1em {
+  font-size: 1em; }
+
+.font-1_125em {
+  font-size: 1.125em; }
+
+.text-1_25em {
+  font-size: 1.25em; }
+
+.font-1_375em {
+  font-size: 1.375em; }
+
+.font-1_5em {
+  font-size: 1.5em; }
+
+.font-1_625em {
+  font-size: 1.625em; }
+
+.font-1_75em {
+  font-size: 1.75em; }
+
+.font-1_875em {
+  font-size: 1.875em; }
+
+.font-2em {
+  font-size: 2em; }
+
+.font-2_5em {
+  font-size: 2.5em; }
+
+.font-3em {
+  font-size: 3em; }
+
+@keyframes expand {
+  0% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Safari */
+    -o-transform: scale(1, 1);
+    /* Opera */
+    -moz-transform: scale(1, 1);
+    /* Fire Fox */
+    transform: scale(1, 1); }
+  100% {
+    -ms-transform: scale(1.05, 1.05);
+    /* IE 9 */
+    -webkit-transform: scale(1.05, 1.05);
+    /* Safari */
+    -o-transform: scale(1.05, 1.05);
+    /* Opera */
+    -moz-transform: scale(1.05, 1.05);
+    /* Fire Fox */
+    transform: scale(1.05, 1.05); } }
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+/* Debug */
+.identify-red {
+  border: 1.5px red dashed; }
+
+.identify-blue {
+  border: 1.5px blue dashed; }
+
+.identify-green {
+  border: 1.5px green dashed; }
+
+/* Logo bar */
+#logobar {
+  height: 100px; }
+
+#logobox {
+  background-color: #1D1D1D; }
+
+#logobox:hover {
+  -webkit-animation-name: expand;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: expand;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.6s;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-name: expand;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 0.6s;
+  -o-animation-fill-mode: forwards;
+  animation-name: expand;
+  animation-delay: 0s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards; }
+  #logobox:hover .logocharA {
+    color: #f35982; }
+  #logobox:hover .logocharB {
+    color: #fcbd4f; }
+  #logobox:hover .logocharC {
+    color: #10c65c; }
+  #logobox:hover .logocharD {
+    color: #39e4ea; }
+  #logobox:hover .logocharE {
+    color: #517fec; }
+  #logobox:hover .logocharF {
+    color: #e82153; }
+
+#logotext {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+/* Nav Bar */
+.nav-item:hover {
+  border: 0.1px gray solid;
+  -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3); }
+
+/* Middle */
+/* Carousel */
+#carousel .carousel-item {
+  height: 450px; }
+#carousel .carousel-item img {
+  height: 450px; }
+
+#carousel-space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 225, 225, 0.2);
+  perspective: 500px; }
+
+.carousel-wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border: 1px black solid;
+  box-shadow: inset 0 0 1px 1px gray; }
+
+#carousel-wall-top {
+  padding-top: 100%;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+  background-image: linear-gradient(white, lightgray); }
+
+#carousel-wall-right {
+  transform-origin: right center;
+  transform: rotateY(-90deg);
+  background-image: linear-gradient(-90deg, white, lightgray); }
+
+#carousel-wall-bottom {
+  top: 100%;
+  padding-top: 100%;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+  background-image: linear-gradient(white, lightgray); }
+
+#carousel-wall-left {
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  background-image: linear-gradient(90deg, white, lightgray); }
+
+#carousel-wall-middle {
+  z-index: -1;
+  transform: scale(3, 3) translateZ(-1300px);
+  background: lightgray; }
+
+.carousel-item {
+  perspective: 750px;
+  transform: translateZ(-750px); }
+
+.carousel-img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-size: cover;
+  background-position: center;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  -webkit-animation-name: rotateY;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: rotateY;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-name: rotateY;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 5s;
+  -o-animation-iteration-count: infinite;
+  animation-name: rotateY;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.carousel-caption {
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6); }
+
+/* Bottom */
+#about-me {
+  height: 275px;
+  background-color: #878787; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+$white: #FFFFFF;
+$pitch-black: #000000;
+$black: #1D1D1D;
+$dark-grey: #43423E;
+$grey: #919190;
+$bright-orange: #FDC566;
+
+/* Graffiti Colors */
+$graffiti-red: #e82153;
+$graffiti-pink: #f35982;
+$graffiti-light-pink: #e6b3c1;
+$graffiti-dark-blue: #3d6ddb;
+$graffiti-sky-blue: #517fec;
+$graffiti-neon-blue: #39e4ea;
+$graffiti-light-green: #5dea97;
+$graffiti-green: #10c65c;
+$graffiti-orange: #fcbd4f;
+$graffiti-light-grey: #878787;
+
+@mixin color($color){
+  color: $color;
+}
+
+@mixin bg-color($color){
+  background-color: $color;
+}
+
+.bg-black{
+  background-color: $black;
+}
+
+.bg-pitch-black{
+  background-color: $pitch-black;
+}
+
+.bg-half-transparent {
+  opacity: 0.5;
+}
+
+.font-black {
+  color: $black;
+}
+
+.font-pitch-black {
+  color: $pitch-black;
+}
+
+.font-white {
+  color: $white;
+}
+
+.font-dark-grey {
+  color: $dark-grey;
+}
+
+.font-grey {
+  color: $grey;
+}
+
+.font-bright-orange {
+  color: $bright-orange;
+}
