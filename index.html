@@ -36,8 +36,9 @@
 <!-- Wraps Entire Page (Row)-->
 <div class="row justify-content-center">
 
+    <div class="col-12 col-lg-10" id="topbar"></div>
     <!-- Wraps Entire Page (Col)-->
-    <div class="col col-lg-10 m-0 p-0 shadow-lg rounded">
+    <div class="col-12 col-lg-10 m-0 p-0 shadow-lg rounded">
 
         <!-- Logo bar -->
         <div class="row m-0 p-0 justify-content-center align-items-center" id="logobar">
@@ -136,7 +137,7 @@
 
             </div>
         </nav>
-        <div class="row w-100 m-0 p-0 bg-danger" style="height: 5px;"></div>
+        <div class="row w-100 m-0 p-0 section-divider"></div>
 
 
         <!-- Middle (Carousel & Main Body ) -->
@@ -202,23 +203,70 @@
             </div>
         </div>
 
-        <div class="row w-100 m-0 p-0 bg-danger" style="height: 5px;"></div>
+        <div class="row w-100 m-0 p-0 section-divider"></div>
 
-        <!-- Main body -->
-        <div class="row" style="height: 1000px;">
-            <div class="col">
+        <!-- Main body (Card row & Introduction text)-->
+        <div class="row m-0 p-0">
+
+            <!-- Card Row -->
+            <div class="col col-12 font-cabin content-card-row">
+
+                <div class="row">
+                    <!-- Unity Card -->
+                    <div class="col-9 col-md-3 mx-auto my-5 content-card" id="unity-card">
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <img class="content-card-img m-1"src="img/UnityLogo.png" alt="Unity image cap">
+                            <div class="content-card-body">
+                                <hr>
+                                <h4>Survival Shooter & AR-Based Games</h4>
+                                <p>Checkout the progress on the two games I created in Unity</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Cyber Security Card -->
+                    <div class="col-9 col-md-3 mx-auto my-5 content-card" id="security-card">
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <img class="content-card-img m-1" src="img/LinuxLogo.png" alt="Unity image cap">
+                            <div class="content-card-body my-auto">
+                                <hr>
+                                <h4>Survival Shooter & AR-Based Games</h4>
+                                <p>Checkout the progress on the two games I created in Unity</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Extra Card -->
+                    <div class="col-9 col-md-3 mx-auto my-5 content-card" id="extra-card">
+                        <a href="#" style="text-decoration: none; color: black;">
+                            <img class="content-card-img m-1"src="img/UnityLogo.png" alt="Unity image cap">
+                            <div class="content-card-body no-text-deco">
+                                <hr>
+                                <h4 class="no-text-deco">Survival Shooter & AR-Based Games</h4>
+                                <p>Checkout the progress on the two games I created in Unity</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
             </div>
+
+            <div class="col identify-green"></div>
         </div>
 
         <!-- Bottom (About me) -->
-        <div class="row w-100 m-0 p-0" id="about-me">
-            <div class="col">
+        <div class="row w-100 m-0 p-0 font-white font-cabin" id="about-me">
+            <div class="col-11 col-md-3 m-auto p-3 about-me-section" id="about-me-sectionA">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+            </div>
+            <div class="vertical-separator d-none d-md-block align-self-center"></div>
+            <div class="horizontal-separator col-8 offset-2 d-block d-md-none"></div>
+            <div class="col-11 col-md-3 m-auto p-3 about-me-section" id="about-me-sectionB">
 
             </div>
-            <div class="col">
-
-            </div>
-            <div class="col">
+            <div class="vertical-separator d-none d-md-block align-self-center"></div>
+            <div class="horizontal-separator col-8 offset-2 d-block d-md-none"></div>
+            <div class="col-11 col-md-3 m-auto p-3 about-me-section" id="about-me-sectionC">
 
             </div>
         </div>

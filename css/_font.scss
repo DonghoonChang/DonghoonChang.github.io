@@ -22,6 +22,7 @@ $cabin: 'cabinregular';
   font-weight: $value;
 }
 
+/* Font Family */
 .font-marker {
   font-family: $marker, serif;
 }
@@ -30,6 +31,14 @@ $cabin: 'cabinregular';
   font-family: $cabin, serif;
 }
 
+/* Others */
+.no-text-deco{
+  text-decoration: none !important;
+}
+
+
+
+/* Size */
 .font-0_25em{
   font-size: 0.25em;
 }

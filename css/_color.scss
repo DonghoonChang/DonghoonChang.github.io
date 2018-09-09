@@ -3,7 +3,37 @@ $pitch-black: #000000;
 $black: #1D1D1D;
 $dark-grey: #43423E;
 $grey: #919190;
+$super-light-grey: #D3D3D3;
 $bright-orange: #FDC566;
+
+/* Shade(Brown) */
+$cornsilk: #FFF8DC;
+$blanchedalmond: #FFEBCD;
+$bisque: #FFE4C4;
+$navajowhite: #FFDEAD;
+$wheat:	#F5DEB3;
+$burlywood:	#DEB887;
+$tan: #D2B48C;
+$rosybrown:	#BC8F8F;
+$sandybrown: #F4A460;
+$goldenrod:	#DAA520;
+$peru: #CD853F;
+$chocolate: #D2691E;
+$saddlebrown: #8B4513;
+$sienna: #A0522D;
+$brown:	#A52A2A;
+$maroon: #800000;
+
+/* Shades(Black) */
+$grey-black: #414A4C;
+$slate-black: #3B444B;
+$soft-black: #353839;
+$blue-black: #232B2B;
+
+/* Shades(White) */
+$blue-tint: #F8F8FF;
+$yellow-tint: #FEFEFA;
+$red-tint: #FFFAFA;
 
 /* Graffiti Colors */
 $graffiti-red: #e82153;
@@ -16,6 +46,38 @@ $graffiti-light-green: #5dea97;
 $graffiti-green: #10c65c;
 $graffiti-orange: #fcbd4f;
 $graffiti-light-grey: #878787;
+
+/* Bootstrap Colors */
+$bootstrap-danger1: #F6565A;
+$bootstrap-danger2: #F5393D;
+$bootstrap-danger3: #F41C20;
+$bootstrap-alert1: #FFC42A;
+$bootstrap-alert2: #FFBC0B;
+$bootstrap-alert3: #EBABOO;
+$bootstrap-warning1: #FF8441;
+$bootstrap-warning2: #FF7022;
+$bootstrap-warning3: #FF5C03;
+$bootstrap-info1: #68DEBB;
+$bootstrap-info2: #4FD8B0;
+$bootstrap-info3: #36D2A5;
+$bootstrap-success1: #CADB47;
+$bootstrap-success2: #C3D62D;
+$bootstrap-success3: #AEBF25;
+$bootstrap-primary1: #80DAE5;
+$bootstrap-primary2: #67D3E0;
+$bootstrap-primary3: #4ECCDB;
+$bootstrap-dark1: #363C56;
+$bootstrap-dark2: #2A2F43;
+$bootstrap-dark3: #1E2230;
+$bootstrap-default1: #FEFEFE;
+$bootstrap-default2: #FAFAFA;
+$bootstrap-default3: #F2F2F2;
+$bootstrap-primary1: #80DAE5;
+$bootstrap-primary2: #67D3E0;
+$bootstrap-primary3: #4ECCDB;
+$bootstrap-system1: #675F99;
+$bootstrap-system2: #5A5386;
+$bootstrap-system3: #4D4773;
 
 @mixin color($color){
   color: $color;
