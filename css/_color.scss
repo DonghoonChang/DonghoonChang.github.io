@@ -79,6 +79,14 @@ $bootstrap-system1: #675F99;
 $bootstrap-system2: #5A5386;
 $bootstrap-system3: #4D4773;
 
+/* Nintendo */
+$nintendo-red: #D20014;
+$nintendo-dark-red: #77000B;
+$nintendo-grey: #78828B;
+$nintendo-dark-grey: #32353E;
+$nintendo-light-grey: #D5D6DB;
+$nintendo-black: #0B080F;
+
 @mixin color($color){
   color: $color;
 }

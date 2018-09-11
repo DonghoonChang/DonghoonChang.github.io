@@ -17,98 +17,248 @@
   border: 1.5px white dashed;
 }
 
-#topbar {
-  height: 10px;
-  background: $bootstrap-warning1;
+.icon-35 {
+  width: 35px;
+  height: 35px;
 }
 
+.icon-50 {
+  width: 50px;
+  height: 50px;
+}
 
-/* Logo bar */
+span.text-vertical-center{
+  vertical-align: middle;
+}
+
+a.clickable{
+  display: inline-block;
+}
+a.clickable:hover{
+  transform: scale(1.1);
+}
+
+#target{
+}
+
+#topbar {
+  height: 10px;
+}
+
 #logobar{
 
   height: 100px;
-}
 
-#logobox {
-
-  @include bg-color($black);
-}
-
-#logobox:hover{
-
-  @include animation-forward(expand, 0s, 0.6s);
-
-  .logocharA{
-
-    @include color($graffiti-pink);
+  #logobox {
+    @include bg-color($black);
   }
 
-  .logocharB{
+  #logobox:hover{
 
-    @include color($graffiti-orange);
+    @include animation-forward(expand, 0s, 0.6s);
+
+    .logocharA{
+
+      @include color($graffiti-pink);
+    }
+
+    .logocharB{
+
+      @include color($graffiti-orange);
+    }
+
+    .logocharC{
+
+      @include color($graffiti-green);
+    }
+
+    .logocharD{
+
+      @include color($graffiti-neon-blue);
+    }
+
+    .logocharE{
+      @include color($graffiti-sky-blue);
+    }
+
+    .logocharF{
+
+      @include color($graffiti-red);
+    }
   }
 
-  .logocharC{
-
-    @include color($graffiti-green);
+  #logotext {
+    @include color($white);
+    text-decoration: none;
   }
 
-  .logocharD{
-
-    @include color($graffiti-neon-blue);
-  }
-
-  .logocharE{
-    @include color($graffiti-sky-blue);
-  }
-
-  .logocharF{
-
-    @include color($graffiti-red);
-  }
-}
-
-#logotext {
-
-  @include color($white);
-  text-decoration: none;
 }
 
 .section-divider {
 
   height: 5px;
-  background: linear-gradient(90deg, $bootstrap-dark1, $bootstrap-danger2 10%, $bootstrap-danger2 90%, $bootstrap-dark1);
+  width: 99%;
+  background: black;
 }
 
-
-/* Nav Bar */
 #navbar {
+
+  z-index: 1;
+
+  .nav-item:hover {
+  }
 }
 
-.nav-item:hover {
-  border: 0.1px gray solid;
-  -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
-  -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
-  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+#rssbar{
+  height: 65px;
+  background: white;
+  border-left: 5px black solid;
+  border-right: 5px black solid;
+}
 
-  transform: scale(1.025);
+#nintendobar{
+  height: 60px;
+  padding: 5px 0px 5px 0px;
+  border-left: 5px black solid;
+  border-right: 5px black solid;
+  background: $nintendo-black;
+  color: $nintendo-red;
+
+  .nintendo-cross-button-container{
+    position: relative;
+    height: 60px;
+    width: 60px;
+  }
+
+  .nintendo-cross-button-x{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    left: 2.5px;
+    top: 17.5px;
+    background: $nintendo-dark-grey;
+    box-shadow: inset -1px -2px 0px 1px $nintendo-light-grey;
+    border-radius: 2px;
+  }
+
+  .nintendo-cross-button-y{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 17.5px;
+    top: 2.5px;
+    background: $nintendo-dark-grey;
+    border-radius: 2px;
+  }
+
+  #nintendo-middle-area{
+    background: $nintendo-light-grey;
+    border-radius: 10px;
+    box-shadow: 0px 3px 1px 0px $nintendo-dark-grey;
+  }
+
+  #nintendo-middle-area-shadow{
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+    border-radius: 10px;
+    border-top: 4px $nintendo-dark-grey solid;
+    border-left: 2px $nintendo-dark-grey solid;
+    border-right: 2px $nintendo-dark-grey solid;
+    border-bottom: 1px $nintendo-dark-grey solid;
+  }
+
+  #nintendo-select-button{
+    height: 15px;
+    width: 45px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: inset 0px -2.5px 0px 1px $nintendo-dark-grey;
+  }
+
+  #nintendo-start-button{
+    height: 15px;
+    width: 45px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: inset 0px -2.5px 0px 1px $nintendo-dark-grey;
+  }
+
+  .nintendo-button-square{
+    width: 50px;
+    height: 50px;
+    padding: 2.5px 0px 0px 0px;
+    background: $nintendo-light-grey;
+    border-radius: 10px;
+  }
+
+  .nintendo-circle-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: $nintendo-red;
+    box-shadow: 1.5px 2.5px 0px 1.5px $nintendo-dark-red;
+  }
 }
 
 
 /* Middle */
-/* Carousel */
-$carousel-height: 450px;
+$carousel-height: 400px;
 $perspective: 500px;
 
 #carousel{
+  height: $carousel-height;
+  background: white;
+  border-left: 5px black solid;
+  border-right: 5px black solid;
 
   .carousel-item{
-
     height: $carousel-height;
   }
-  .carousel-item img{
 
-    height: $carousel-height;
+  .carousel-img {
+    width: 75% !important;
+    height: 75% !important;
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+  }
+
+  .carousel-caption{
+    width: 50%;
+    height: auto;
+    border-top: 5px $pitch-black solid;
+    border-bottom: 5px $pitch-black solid;
+    background: white;
+    color: $pitch-black;
+  }
+
+  .carousel-caption:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    border-left: 5px $pitch-black solid;
+    background: transparent;
+  }
+
+  .carousel-caption:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    border-right: 5px $pitch-black solid;
+    background: transparent;
   }
 }
 
@@ -118,142 +268,130 @@ $perspective: 500px;
   height: 100%;
   background: rgba(225,225,225,0.2);
   perspective: $perspective;
-}
 
-.carousel-wall{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  border: 1px black solid;
-  box-shadow: inset 0 0 1px 1px gray;
-  //backface-visibility: hidden;
-}
+  .carousel-wall{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
 
-#carousel-wall-top{
-  padding-top: 100%;
-  transform-origin: center top;
-  transform: rotateX(-90deg);
+  #carousel-wall-top{
+    padding-top: 100%;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+    border-bottom: 20px black solid;
+  }
 
-  background-image: linear-gradient(white, lightgray);
-}
+  #carousel-wall-right{
+    transform-origin: right center;
+    transform: rotateY(-90deg);
+    border-top: 2px black solid;
+    border-left: 10px black solid;
+    border-bottom: 2px black solid;
+  }
 
-#carousel-wall-right{
+  #carousel-wall-bottom{
+    top: 100%;
+    padding-top: 100%;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+    border-bottom: 20px black solid;
+  }
 
-  transform-origin: right center;
-  transform: rotateY(-90deg);
+  #carousel-wall-left{
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    border-top: 2px black solid;
+    border-right: 10px black solid;
+    border-bottom: 2px black solid;
+  }
 
-  background-image: linear-gradient(-90deg, white, lightgray);
-}
-
-#carousel-wall-bottom{
-  top: 100%;
-  padding-top: 100%;
-  transform-origin: center top;
-  transform: rotateX(-90deg);
-
-  background-image: linear-gradient(white, lightgray);
-}
-
-#carousel-wall-left{
-
-  transform-origin: left center;
-  transform: rotateY(90deg);
-  background-image: linear-gradient(90deg, white, lightgray);
-}
-
-#carousel-wall-middle{
-
-  z-index: -1;
-  transform: scale(3, 3) translateZ(-1300px);
-  background: lightgray;
-}
-
-.carousel-item{
-  perspective: 750px;
-  transform: translateZ(-750px);
+  #carousel-wall-middle{
+    display: none;
+  }
 
 }
-
-.carousel-img {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  background-size: cover;
-  background-position: center;
-  transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  @include animation-repeat(rotateY, 0s, 5s);
-  animation-timing-function: linear;
-}
-
-.carousel-caption{
-  width: 50%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
 
 /*Content Card*/
 .content-card-row{
-  border: 5px $dark-grey solid;
-  border-radius: 10px;
-}
 
-.content-card {
-  height: 350px;
-  padding: 15px;
-  background: white;
-  border: .5px $graffiti-light-grey solid;
-}
+  .content-card {
+    height: 350px;
+    padding: 15px;
+    background: white;
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+  }
 
-.content-card:hover {
+  .content-card:after {
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -3px;
+    top: 0px;
+    border-left: 3px black solid;
+  }
 
-  transform: scale(1.05, 1.05);
-}
+  .content-card:before {
+    content:' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    border-right: 3px black solid;
+  }
 
-.content-card-img{
-  width: 90%;
-  height: 30%;
-  margin: 5%;
-}
+  .content-card:hover {
 
-.content-card-body{
-  height:70%;
-}
+    transform: scale(1.05, 1.05);
+  }
 
-#unity-card{
+  .content-card-img{
+    width: 90%;
+    height: 30%;
+    margin: 5%;
+  }
 
-  box-shadow: 5px 7.5px 8.5px 2.5px $soft-black;
-}
-#security-card {
+  .content-card-body{
+    height:70%;
+  }
 
-  box-shadow: 0px 7.5px 8.5px 2.5px $soft-black;
-}
+  #unity-card{
+    box-shadow: 10px 10px 2.5px 0px $soft-black;
+  }
 
-#extra-card {
+  #security-card {
+    box-shadow: 0px 10px 2.5px 0px $soft-black;
+  }
 
-  box-shadow: -5px 7.5px 8.5px 2.5px $soft-black;
+  #extra-card {
+    box-shadow: -10px 10px 2.5px 0px $soft-black;
+  }
 }
 
 /* Bottom */
 #about-me{
+
   background: $soft-black;
+  box-shadow: inset 0px 3px 5px 0px black;
+
+  .about-me-section{
+    height: 250px;
+  }
+
+  #about-me-sectionA {
+  }
+
+  #about-me-sectionB {
+  }
+
+  #about-me-sectionC {
+  }
 }
 
-.about-me-section{
-  height: 250px;
-}
-
-#about-me-sectionA {
-}
-
-#about-me-sectionB {
-
-}
-
-#about-me-sectionC {
-
-}
 
 .vertical-separator{
   height: 200px;
