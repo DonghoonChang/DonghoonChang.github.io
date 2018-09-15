@@ -5,6 +5,20 @@ $dark-grey: #43423E;
 $grey: #919190;
 $super-light-grey: #D3D3D3;
 $bright-orange: #FDC566;
+$csharp-violet: #996ad5;
+
+/* Pastel */
+$pastel-grey: #cfcfc4;
+
+/*Firebase */
+$firebase-yellow: #FFCA28;
+$firebase-amber: #FFA000;
+$firebase-orange: #F57C00;
+$firebase-blue: #039BE5;
+$firebase-navy: #2C384A;
+$firebase-coral: #FF8A65;
+$fireabse-grey: #ECEFF1;
+
 
 /* Shade(Brown) */
 $cornsilk: #FFF8DC;
@@ -107,12 +121,53 @@ $nintendo-black: #0B080F;
   opacity: 0.5;
 }
 
+/* Font Colors */
 .font-black {
   color: $black;
 }
 
 .font-pitch-black {
   color: $pitch-black;
+}
+
+.font-firebase-yellow{
+  color: $firebase-yellow;
+}
+
+.font-firebase-amber{
+  color: $firebase-amber;
+}
+
+.font-firebase-orange{
+  color: $firebase-orange;
+}
+
+.font-firebase-navy{
+  color: $firebase-navy;
+}
+
+.font-graffiti-sky-blue{
+  color: $graffiti-sky-blue;
+}
+
+.font-graffiti-dark-blue{
+  color: $graffiti-dark-blue;
+}
+
+.font-graffiti-red{
+  color: $graffiti-red;
+}
+
+.font-graffiti-light-green{
+  color: $graffiti-light-green;
+}
+
+.font-graffiti-green{
+  color: $graffiti-green;
+}
+
+.font-bootstrap-danger3{
+  color: $bootstrap-danger3;
 }
 
 .font-white {
@@ -129,4 +184,8 @@ $nintendo-black: #0B080F;
 
 .font-bright-orange {
   color: $bright-orange;
+}
+
+.font-csharp-violet{
+  color: $csharp-violet;
 }

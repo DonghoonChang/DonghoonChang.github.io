@@ -15,9 +15,6 @@ $press-start-2p: 'press_start_2pregular';
          url('../font/Cabin/cabin-regular-webfont.woff') format('woff');
 }
 
-
-
-
 @font-face {
   font-family: 'press_start_2pregular';
   src: url('../font/PressStart2P/pressstart2p-regular-webfont.woff2') format('woff2'),
@@ -44,6 +41,7 @@ $press-start-2p: 'press_start_2pregular';
 .font-press2p{
   font-family: $press-start-2p, serif;
 }
+
 /* Others */
 .no-text-deco{
   text-decoration: none !important;
@@ -53,6 +51,9 @@ $press-start-2p: 'press_start_2pregular';
   font-weight: bold;
 }
 
+.text-uppercase{
+  text-transform: uppercase;
+}
 
 /* Size */
 .font-0_25em{
@@ -75,7 +76,7 @@ $press-start-2p: 'press_start_2pregular';
   font-size: 1.125em;
 }
 
-.text-1_25em{
+.font-1_25em{
   font-size: 1.25em;
 }
 
@@ -109,4 +110,252 @@ $press-start-2p: 'press_start_2pregular';
 
 .font-3em{
   font-size: 3em;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  /* Size */
+  .font-sm-0_25em{
+    font-size: 0.25em;
+  }
+
+  .font-sm-0_5em{
+    font-size: 0.5em;
+  }
+
+  .font-sm-0_75em{
+    font-size: 0.75em;
+  }
+
+  .font-sm-1em{
+    font-size: 1em;
+  }
+
+  .font-sm-1_125em{
+    font-size: 1.125em;
+  }
+
+  .font-sm-1_25em{
+    font-size: 1.25em;
+  }
+
+  .font-sm-1_375em{
+    font-size: 1.375em;
+  }
+
+  .font-sm-1_5em{
+    font-size: 1.5em;
+  }
+
+  .font-sm-1_625em{
+    font-size: 1.625em;
+  }
+
+  .font-sm-1_75em{
+    font-size: 1.75em;
+  }
+
+  .font-sm-1_875em{
+    font-size: 1.875em;
+  }
+
+  .font-sm-2em{
+    font-size: 2em;
+  }
+
+  .font-sm-2_5em{
+    font-size: 2.5em;
+  }
+
+  .font-sm-3em{
+    font-size: 3em;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  /* Size */
+  .font-md-0_25em{
+    font-size: 0.25em;
+  }
+
+  .font-md-0_5em{
+    font-size: 0.5em;
+  }
+
+  .font-md-0_75em{
+    font-size: 0.75em;
+  }
+
+  .font-md-1em{
+    font-size: 1em;
+  }
+
+  .font-md-1_125em{
+    font-size: 1.125em;
+  }
+
+  .font-md-1_25em{
+    font-size: 1.25em;
+  }
+
+  .font-md-1_375em{
+    font-size: 1.375em;
+  }
+
+  .font-md-1_5em{
+    font-size: 1.5em;
+  }
+
+  .font-md-1_625em{
+    font-size: 1.625em;
+  }
+
+  .font-md-1_75em{
+    font-size: 1.75em;
+  }
+
+  .font-md-1_875em{
+    font-size: 1.875em;
+  }
+
+  .font-md-2em{
+    font-size: 2em;
+  }
+
+  .font-md-2_5em{
+    font-size: 2.5em;
+  }
+
+  .font-md-3em{
+    font-size: 3em;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  /* Size */
+  .font-lg-0_25em{
+    font-size: 0.25em;
+  }
+
+  .font-lg-0_5em{
+    font-size: 0.5em;
+  }
+
+  .font-lg-0_75em{
+    font-size: 0.75em;
+  }
+
+  .font-lg-1em{
+    font-size: 1em;
+  }
+
+  .font-lg-1_125em{
+    font-size: 1.125em;
+  }
+
+  .font-lg-1_25em{
+    font-size: 1.25em;
+  }
+
+  .font-lg-1_375em{
+    font-size: 1.375em;
+  }
+
+  .font-lg-1_5em{
+    font-size: 1.5em;
+  }
+
+  .font-lg-1_625em{
+    font-size: 1.625em;
+  }
+
+  .font-lg-1_75em{
+    font-size: 1.75em;
+  }
+
+  .font-lg-1_875em{
+    font-size: 1.875em;
+  }
+
+  .font-lg-2em{
+    font-size: 2em;
+  }
+
+  .font-lg-2_5em{
+    font-size: 2.5em;
+  }
+
+  .font-lg-3em{
+    font-size: 3em;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  /* Size */
+  .font-xl-0_25em{
+    font-size: 0.25em;
+  }
+
+  .font-xl-0_5em{
+    font-size: 0.5em;
+  }
+
+  .font-xl-0_75em{
+    font-size: 0.75em;
+  }
+
+  .font-xl-1em{
+    font-size: 1em;
+  }
+
+  .font-xl-1_125em{
+    font-size: 1.125em;
+  }
+
+  .font-xl-1_25em{
+    font-size: 1.25em;
+  }
+
+  .font-xl-1_375em{
+    font-size: 1.375em;
+  }
+
+  .font-xl-1_5em{
+    font-size: 1.5em;
+  }
+
+  .font-xl-1_625em{
+    font-size: 1.625em;
+  }
+
+  .font-xl-1_75em{
+    font-size: 1.75em;
+  }
+
+  .font-xl-1_875em{
+    font-size: 1.875em;
+  }
+
+  .font-xl-2em{
+    font-size: 2em;
+  }
+
+  .font-xl-2_5em{
+    font-size: 2.5em;
+  }
+
+  .font-xl-3em{
+    font-size: 3em;
+  }
 }

@@ -43,7 +43,7 @@
 }
 
 @keyframes expand {
-  0%{
+  from{
     -ms-transform: scale(1, 1); /* IE 9 */
     -webkit-transform: scale(1, 1); /* Safari */
     -o-transform: scale(1, 1); /* Opera */
@@ -51,7 +51,7 @@
     transform: scale(1, 1);
   }
 
-  100%{
+  to{
     -ms-transform: scale(1.05, 1.05); /* IE 9 */
     -webkit-transform: scale(1.05, 1.05); /* Safari */
     -o-transform: scale(1.05, 1.05); /* Opera */
@@ -61,21 +61,26 @@
 }
 
 @keyframes rotateY {
-  0% {
+  from {
     transform: rotateY(0deg);
   }
 
-  100% {
+  to {
     transform: rotateY(360deg);
   }
 }
 
-@keyframes rotateY {
-  0% {
-    transform: rotateY(0deg);
+@keyframes scrollX {
+  from {
+    transform: translateX(0%);
   }
 
-  100% {
-    transform: rotateY(360deg);
+  to {
+    transform: translateX(-100%);
   }
+}
+
+@keyframes bg-blinking {
+  from, to {background: transparent;}
+  50% {background: grey;}
 }

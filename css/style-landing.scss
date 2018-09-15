@@ -1,0 +1,402 @@
+@import "style-common";
+
+#nintendobar{
+  height: 60px;
+  border-radius: 2.5px;
+  border-left: 2.5px black solid;
+  border-right: 2.5px black solid;
+  border-bottom: 1.5px black solid;
+  color: $nintendo-red;
+  background: $nintendo-black;
+
+  .nintendo-cross-button-container{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .nintendo-cross-button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 2.5px;
+    background: $nintendo-dark-grey;
+    cursor: pointer;
+  }
+
+  .nintendo-cross-button-up{
+    top: 0px;
+    left: 20px;
+    box-shadow: inset -2px 0px 0px 0px $nintendo-light-grey;
+  }
+
+  .nintendo-cross-button-down{
+    top: 40px;
+    left: 20px;
+    box-shadow: inset -1px -2px 0px 1px $nintendo-light-grey;
+  }
+
+  .nintendo-cross-button-middle{
+    top: 20px;
+    left: 20px;
+  }
+
+  .nintendo-cross-button-left{
+    top: 20px;
+    left: 0px;
+    box-shadow: inset 0px -2px 0px 0px $nintendo-light-grey;
+  }
+
+  .nintendo-cross-button-right{
+    top: 20px;
+    left: 40px;
+    box-shadow: inset -1px -2px 0px 1px $nintendo-light-grey;
+  }
+
+  #nintendo-middle-area{
+    background: $pastel-grey;
+    box-shadow: 0px 3px 1px 0px $nintendo-dark-grey;
+    border-radius: 2.5px;
+  }
+
+  #nintendo-middle-area-shadow{
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+    border-radius: 2.5px;
+    border-top: 4px $nintendo-dark-grey solid;
+    border-left: 2px $nintendo-dark-grey solid;
+    border-right: 2px $nintendo-dark-grey solid;
+    border-bottom: 1px $nintendo-dark-grey solid;
+  }
+
+  #nintendo-select-button{
+    height: 15px;
+    width: 45px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: inset 0px -2.5px 0px 1px $nintendo-dark-grey;
+    cursor: pointer;
+  }
+
+  #nintendo-start-button{
+    height: 15px;
+    width: 45px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: inset 0px -2.5px 0px 1px $nintendo-dark-grey;
+    cursor: pointer;
+  }
+
+  .nintendo-button-square{
+    width: 50px;
+    height: 50px;
+    padding: 2.5px 0px 0px 0px;
+    background: $nintendo-light-grey;
+    border-radius: 2.5px;
+  }
+
+  .nintendo-circle-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: $nintendo-red;
+    box-shadow: 1.5px 2.5px 0px 1.5px $nintendo-dark-red;
+    cursor: pointer;
+  }
+}
+
+/* Middle */
+$carousel-height: 400px;
+$perspective: 500px;
+
+#carousel{
+  height: $carousel-height;
+
+  .carousel-inner{
+    background-image:
+            url("../img/Jungle Asset Pack/plx-5.png"),
+            url("../img/Jungle Asset Pack/plx-4.png"),
+            url("../img/Jungle Asset Pack/plx-3.png"),
+            url("../img/Jungle Asset Pack/plx-2.png"),
+            url("../img/Jungle Asset Pack/plx-1.png");
+    background-size: contain;
+  }
+
+  .carousel-item{
+    height: $carousel-height;
+  }
+
+  .carousel-img {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .carousel-caption{
+    width: 50%;
+    height: auto;
+    border-top: 3px $pitch-black solid;
+    border-bottom: 4px $pitch-black solid;
+    background: white;
+    color: $pitch-black;
+  }
+
+  .carousel-caption:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    border-left: 3px $pitch-black solid;
+    background: transparent;
+  }
+
+  .carousel-caption:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    border-right: 4px $pitch-black solid;
+    background: transparent;
+  }
+}
+
+#carousel-space{
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(150, 150, 150, 0.1);
+
+  perspective: $perspective;
+
+  /*
+  .carousel-wall{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+
+  #carousel-wall-top{
+    padding-top: 100%;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+    border-bottom: 20px black solid;
+  }
+
+  #carousel-wall-right{
+    transform-origin: right center;
+    transform: rotateY(-90deg);
+    border-top: 2px black solid;
+    border-left: 10px black solid;
+    border-bottom: 2px black solid;
+  }
+
+  #carousel-wall-bottom{
+    top: 100%;
+    padding-top: 100%;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+    border-bottom: 20px black solid;
+  }
+
+  #carousel-wall-left{
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    border-top: 2px black solid;
+    border-right: 10px black solid;
+    border-bottom: 2px black solid;
+  }
+
+  #carousel-wall-middle{
+    display: none;
+  }
+  */
+}
+
+.content-card-row{
+
+  .content-card {
+    background: white;
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+    box-shadow: 10px 10px 0px 0px $super-light-grey;
+    text-transform: uppercase;
+  }
+
+  .content-card-body{
+    height: 70%;
+    padding: 10px 5px 10px 5px;
+  }
+
+  .content-card:after {
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -3px;
+    top: 0px;
+    border-left: 3px black solid;
+  }
+
+  .content-card:before {
+    content:' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    border-right: 3px black solid;
+  }
+
+  .content-card:hover {
+    @include animation-forward(expand, 0s, 0.5s);
+  }
+}
+
+#blog-intro{
+  border-top: 3px $pitch-black solid;
+  border-bottom: 5px $pitch-black solid;
+  z-index: 1;
+}
+
+#blog-intro:before, #blog-intro:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+#blog-intro:before{
+  border-left: $pitch-black 3px solid;
+  left: -5px;
+}
+
+#blog-intro:after{
+  border-right: $pitch-black 5px solid;
+  left: 5px;
+}
+
+#typewriter{
+  overflow: hidden;
+  margin: 0 auto;
+  letter-spacing: .15em;
+
+  animation:
+          typing 3.5s steps(40, end);
+}
+
+#typewriter-cursor{
+  display: inline-block;
+  width: 0.5em;
+  height: 20px;
+  background: grey;
+  animation:
+          bg-blinking .5s step-end infinite;
+}
+
+.typewriter-btn{
+  display: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  color:white;
+  background: $pitch-black;
+  padding: 0px 2px 0px 2px;
+
+}
+
+.typewriter-btn:hover {
+  cursor: pointer;
+}
+
+/* Bottom */
+#about-me{
+
+  background: $soft-black;
+  box-shadow: inset 0px 3px 5px 0px black;
+
+  .about-me-section{
+    height: 250px;
+  }
+
+  #about-me-sectionA:after {
+    content: '';
+    width: 80%;
+    height: 0%;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border-right: white 0px dashed;
+    border-bottom: white 2px dashed;
+  }
+
+  #about-me-sectionB:after {
+    content: '';
+    width: 80%;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border-right: white 0px dashed;
+    border-bottom: white 2px dashed;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  #about-me {
+
+    #about-me-sectionA:after {
+      content: '';
+      width: 0%;
+      height: 80%;
+      position: absolute;
+      top: 10%;
+      left: 100%;
+      border-right: white 2px dashed;
+      border-bottom: white 0px dashed;
+    }
+
+    #about-me-sectionB:after {
+      content: '';
+      width: 0;
+      height: 80%;
+      position: absolute;
+      top: 10%;
+      left: 100%;
+      border-right: white 2px dashed;
+      border-bottom: white 0px dashed;
+    }
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
