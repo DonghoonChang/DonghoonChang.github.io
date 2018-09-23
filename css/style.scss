@@ -32,7 +32,7 @@ body{
   width: 100%;
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(to bottom, #4d4c47 0%,#3c3b37 100%);
+  background: linear-gradient(to bottom, #4d4c47 0%, #3c3b37 100%);
   font-family: $ubuntu-mono;
   border-radius: 8px 8px 0px 0px;
   box-shadow: 0px -0.5rem 1rem 0.5rem rgba(0,0,0, 0.3);
@@ -145,6 +145,7 @@ body{
 
         .dropdown-menu{
           margin: 0px;
+          padding: 0px;
           background: #4d4c47;
           border-top-left-radius: 0px;
           border-top-right-radius: 0px;
@@ -180,7 +181,6 @@ body{
 }
 
 .carousel{
-
   box-shadow: 0px 0.5rem 1rem 0.5rem rgba(0,0,0, 0.3);
 
   .carousel-inner{
@@ -269,7 +269,6 @@ body{
       }
     }
 
-
     .carousel-caption-content{
       width: 100%;
       height: 100%;
@@ -286,7 +285,6 @@ body{
         font-size: 15em;
         font-weight: 700;
       }
-
 
       .caption-symbol-shadow{
         text-shadow: 5px 5px 10px black;
@@ -339,7 +337,9 @@ body{
 .terminal{
   position: relative;
   width: 100%;
+  min-height: 350px;
   padding: 25px 15px 25px 15px;
+  text-align: center;
   background: black;
   overflow: hidden;
   color: green;
@@ -411,46 +411,71 @@ body{
   margin: 0px;
   padding: 0px;
 
-  .cursor{
+  .textarea{
     display: inline-block;
-    width: 4px;
-    height: 1em;
-    background: green;
-    animation:
-            bg-blinking .5s step-end infinite;
+    margin: 0px;
+    padding: 0px;
+    width: 90%;
+    min-height: 175px;
+
+    .cursor{
+      display: inline-block;
+      width: 4px;
+      height: 1em;
+      background: green;
+      animation:
+              bg-blinking .5s step-end infinite;
+    }
+
+    @keyframes bg-blinking {
+      from, to {opacity: 0;}
+      50% {opacity: 1;}
+    }
+
   }
 
-  .btn{
-    display: block;
-    margin: auto;
-    padding: 1px 5px 1px 5px;
-    font-size: 0.75em;
-    text-decoration: none;
+  hr{
+    width: 90%;
     color: green;
+    border-bottom: 4px dashed green;
   }
 
-  .btn:hover{
-    opacity: 0.8;
-  }
+  .buttonarea{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 90%;
+    text-align: left;
+    min-height: 175px;
 
-  @keyframes bg-blinking {
-    from, to {opacity: 0;}
-    50% {opacity: 1;}
+    .btn{
+      display: block;
+      margin: auto;
+      padding: 1px 5px 1px 5px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: green;
+      font-size: 0.75em;
+    }
+
+    .btn:hover{
+      border: 2px solid green;
+    }
   }
 }
 
 #main-row{
-  font-family: $montserrat;
+  font-family: $montserrat-thin;
   position: relative;
-  width: 100%;
-  height: 100%;
   background: inherit;
   overflow: hidden;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: 0px 0.5rem 1rem 0.5rem rgba(0,0,0, 0.3);
 }
+
 // Glass Effect
-#main-row:before{
+#main-row:after{
   content: '';
   position: absolute;
   top: -25px;
@@ -458,36 +483,77 @@ body{
   width: calc(100% + 50px);
   height: calc(100% + 50px);
   background: inherit;
-  box-shadow: inset 0px 0px 0px 2000px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 0px 2000px rgba(255, 255, 255, 0.1);
   filter: blur(10px);
 }
 
 #articlebar{
+  z-index: 1;
   margin: 0px;
   padding: 25px 15px 25px 15px;
   color: lightgrey;
   text-shadow: 1px 1px 3.5px black;
   border-right: 1px solid rgba(50, 50, 50, .25);
-
-  h1{
-    font-weight: bold;
-  }
-  p{
-    font-size: 2em;
-  }
+  font-size: 2em;
 }
 
 #rssbar{
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  color: lightgrey;
+  overflow: hidden;
+
 
   .title{
+    padding: 15px auto 0px auto;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3.5px black;
+  }
 
+  hr{
+    margin-bottom: 0px;
   }
 
   #rss-container{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
     .rss-item{
-      text-align: left;
+      margin: 0px;
+      padding: 15px;
+      font-size: 1.25em;
+      font-weight: bold;
 
       .rss-title{
+        text-decoration: none;
+        color: rgba(50, 50, 50, 1);
+        font-size: 1.5em;
+      }
+
+      .rss-desc{
+
+      }
+    }
+
+    .rss-item:nth-child(odd){
+      background: rgba(0,0,0, .05);
+    }
+
+    .rss-item:hover{
+      transform: scale(1.05);
+
+    }
+
+    @keyframes expand{
+      from{
+        transform: scale(1);
+      }
+
+      to{
+        transform: scale(1.05);
       }
     }
   }
@@ -535,7 +601,7 @@ body{
 
       padding: 3.5px 1.5px 3.5px 1.5px;
 
-      .collapse{
+      .navbar-collapse{
 
         li{
 

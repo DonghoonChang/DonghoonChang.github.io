@@ -1,34 +1,14 @@
-$marker: 'permanent_markerregular';
 $cabin: 'cabinregular';
-$press-start-2p: 'press_start_2pregular';
-$anonymous-pro: 'anonymous_proregular';
 $VT323: 'VT323';
 $ubuntu-mono: 'ubuntu_monoregular';
-$montserrat: 'montserratthin';
-
-@font-face {
-    font-family: 'permanent_markerregular';
-    src: url('../font/Permanent_Marker/permanentmarker-regular-webfont.woff2') format('woff2'),
-         url('../font/Permanent_Marker/permanentmarker-regular-webfont.woff') format('woff');
-
-}
+$montserrat-thin: 'montserratthin';
+$montserrat-bold: 'montserratbold';
+$montserrat-regular: 'montserratregular';
 
 @font-face {
     font-family: 'cabinregular';
     src: url('../font/Cabin/cabin-regular-webfont.woff2') format('woff2'),
          url('../font/Cabin/cabin-regular-webfont.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'press_start_2pregular';
-  src: url('../font/PressStart2P/pressstart2p-regular-webfont.woff2') format('woff2'),
-       url('../font/PressStart2P/pressstart2p-regular-webfont.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'anonymous_proregular';
-  src:   url('../font/Anonymous-pro/anonymous_pro.woff2') format('woff2'),
-         url('../font/Anonymous-pro/anonymous_pro.woff') format('woff');
 }
 
 @font-face {
@@ -45,46 +25,20 @@ $montserrat: 'montserratthin';
 
 @font-face{
   font-family: 'montserratthin';
-  src:  url('../font/Montserrat/montserrat-thin-webfont.woff2') format('woff2'),
-        url('../font/Montserrat/montserrat-thin-webfont.woff') format('woff');
+  src:  url('../font/Montserrat-thin/montserrat-thin-webfont.woff2') format('woff2'),
+        url('../font/Montserrat-thin/montserrat-thin-webfont.woff') format('woff');
 }
 
-@mixin font($font){
-  font-family: $font, serif;
+@font-face{
+  font-family: 'montserratbold';
+  src:  url('../font/Montserrat-bold/montserrat-bold-webfont.woff2') format('woff2'),
+        url('../font/Montserrat-bold/montserrat-bold-webfont.woff') format('woff');
 }
 
-@mixin font-weight($value){
-  font-weight: $value;
-}
-
-/* Font Family */
-.font-marker {
-  font-family: $marker, serif;
-}
-
-.font-cabin {
-  font-family: $cabin, serif;
-}
-
-.font-press2p{
-  font-family: $press-start-2p, serif;
-}
-
-.font-anonymous_pro{
-  font-family: $anonymous-pro, serif;
-}
-
-/* Others */
-.no-text-deco{
-  text-decoration: none !important;
-}
-
-.font-bold{
-  font-weight: bold;
-}
-
-.text-uppercase{
-  text-transform: uppercase;
+@font-face{
+  font-family: 'montserratregular';
+  src:  url('../font/Montserrat-regular/montserrat-regular-webfont.woff2') format('woff2'),
+        url('../font/Montserrat-regular/montserrat-regular-webfont.woff') format('woff');
 }
 
 /* Size */

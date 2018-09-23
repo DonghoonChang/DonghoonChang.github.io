@@ -35,7 +35,6 @@
 <div class="row m-0 p-0 justify-content-center bg-inherit">
     <div class="col-12 col-lg-10 m-0 p-0 bg-inherit" id="test">
         <br class="d-none d-lg-block"/>
-
         <!-- First Window (data-group=window-a) -->
         <div class="ubuntu-window" data-group="window-a">
             <div class="topbar">
@@ -155,6 +154,7 @@
         </div>
         <br data-group="window-a"/>
         <br data-group="window-a"/>
+
         <!-- First Window (data-group=window-b) -->
         <div class="ubuntu-window" data-group="window-b">
             <div class="topbar">
@@ -167,16 +167,22 @@
         <div class="terminal" id="terminal" data-group="window-b">
             <div class="scan-line"></div>
             <div id="typewriter">
-                <span class="text">
+                <div class="textarea">
+                    <span class="text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor nisl, luctus ac nibh eu,
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor nisl, luctus ac nibh eu,
                 </span><div class="cursor"></div><br/>
-                <a href="#typewriter" class="btn next">NEXT</a><br>
-                <a href="#typewriter" class="btn prev">&gt;_ I don't care. Good bye.</a>
+                </div>
+                <hr>
+                <div class="buttonarea">
+                    <a href="#typewriter" class="btn next">NEXT</a><br>
+                    <a href="#typewriter" class="btn prev">&gt;_ I don't care. Good bye.</a>
+                </div>
             </div>
         </div>
         <br data-group="window-b"/>
         <br data-group="window-b"/>
+
         <!-- First Window (data-group=window-c) -->
         <div class="ubuntu-window" data-group="window-c">
             <div class="topbar">
@@ -188,54 +194,154 @@
         </div>
         <div class="row m-0 p-0" id="main-row" data-group="window-c">
             <div class="col-12 col-md-8" id="articlebar">
-                <h1 class="display-3">HASHTHEBLOG</h1>
+                <h1 class="display-3" style="font-weight: bold;">HASH THE BLOG</h1>
                 <hr>
                 <p>
-                    What Does This blog Do?
+                    Welcome to my blog! I am Donghoon Chang, and I am studying bachelor of
+                    software engineering at Australian National University. This place will
+                    work as a journal where I keep record of what I've been doing and learning
+                    in and outside of course work. I major in Cyber Security, so most of the focus
+                    will be place on security, but I will also make posts on other things I do.
                 </p>
+                <br/>
+                <h1 class="display-3" style="font-weight: bold;">UNITY AND FIREBASE</h1>
+                <hr>
+                <p>
+                    I first started using Unity when I joined a project making
+                    an AR-based game on mobile platforms. The game re-created the users'
+                    actual surroundings, using the Google Maps API and Unity.<br/><br/>
+                    I worked in the team as a back-end developer and used Firebase to enable
+                    user log-in and saving of their progress in the database.<br/><br/>
+                    I liked how Unity lowered the entry barriers to game development and decided
+                    to develop a game of my favorite genre, zombie survival. The game can be downloaded
+                    using the link on the git repo, so check out for further updates!
+                </p>
+                <br/>
+                <h1 class="display-3" style="font-weight: bold;">CYBER SECURITY</h1>
+                <hr>
+                <p>
+                    This is the part where most of the blog's focus will be placed on. I just started
+                    my way into security, and hopefully will make posts on more advanced topic in the
+                    future.
+                </p>
+                <br/>
+                <h1 class="display-3" style="font-weight: bold;">OTHER PROEJECTS</h1>
+                <hr>
+                <p>
+                    There are also other small-sized projects that I implemented as a hobby, or
+                    after I came across with interesting ideas from online. They are mostly unrelated
+                    to each other and meant to be follow-up activities to what I learn at
+                    the university. They include web-crawling, data-parsing and algorithms.
+                </p>
+
             </div>
             <div class="col-12 col-md-4" id="rssbar">
-                <h1 class="title">Dark Readings</h1>
+                <h1 class="title">DARK READING</h1>
+                <hr>
                 <div id="rss-container">
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                     <div class='rss-item'>
                         <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
-                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                            Sample Description Even Longer Longer Longer Longer Longer
+                        </span>
                     </div>
                 </div>
             </div>

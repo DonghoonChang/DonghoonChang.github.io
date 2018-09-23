@@ -1,15 +1,6 @@
 @font-face {
-  font-family: 'permanent_markerregular';
-  src: url("../font/Permanent_Marker/permanentmarker-regular-webfont.woff2") format("woff2"), url("../font/Permanent_Marker/permanentmarker-regular-webfont.woff") format("woff"); }
-@font-face {
   font-family: 'cabinregular';
   src: url("../font/Cabin/cabin-regular-webfont.woff2") format("woff2"), url("../font/Cabin/cabin-regular-webfont.woff") format("woff"); }
-@font-face {
-  font-family: 'press_start_2pregular';
-  src: url("../font/PressStart2P/pressstart2p-regular-webfont.woff2") format("woff2"), url("../font/PressStart2P/pressstart2p-regular-webfont.woff") format("woff"); }
-@font-face {
-  font-family: 'anonymous_proregular';
-  src: url("../font/Anonymous-pro/anonymous_pro.woff2") format("woff2"), url("../font/Anonymous-pro/anonymous_pro.woff") format("woff"); }
 @font-face {
   font-family: 'VT323';
   src: url("../font/VT323/vt323-regular-webfont.woff2") format("woff2"), url("../font/VT323/vt323-regular-webfont.woff") format("woff"); }
@@ -18,30 +9,13 @@
   src: url("../font/Ubuntu_Mono/ubuntumono-regular-webfont.woff2") format("woff2"), url("../font/Ubuntu_Mono/ubuntumono-regular-webfont.woff") format("woff"); }
 @font-face {
   font-family: 'montserratthin';
-  src: url("../font/Montserrat/montserrat-thin-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-thin-webfont.woff") format("woff"); }
-/* Font Family */
-.font-marker {
-  font-family: "permanent_markerregular", serif; }
-
-.font-cabin {
-  font-family: "cabinregular", serif; }
-
-.font-press2p {
-  font-family: "press_start_2pregular", serif; }
-
-.font-anonymous_pro {
-  font-family: "anonymous_proregular", serif; }
-
-/* Others */
-.no-text-deco {
-  text-decoration: none !important; }
-
-.font-bold {
-  font-weight: bold; }
-
-.text-uppercase {
-  text-transform: uppercase; }
-
+  src: url("../font/Montserrat-thin/montserrat-thin-webfont.woff2") format("woff2"), url("../font/Montserrat-thin/montserrat-thin-webfont.woff") format("woff"); }
+@font-face {
+  font-family: 'montserratbold';
+  src: url("../font/Montserrat-bold/montserrat-bold-webfont.woff2") format("woff2"), url("../font/Montserrat-bold/montserrat-bold-webfont.woff") format("woff"); }
+@font-face {
+  font-family: 'montserratregular';
+  src: url("../font/Montserrat-regular/montserrat-regular-webfont.woff2") format("woff2"), url("../font/Montserrat-regular/montserrat-regular-webfont.woff") format("woff"); }
 /* Size */
 .font-0_25em {
   font-size: 0.25em; }
@@ -464,6 +438,7 @@ body {
       font-size: 20px; }
     .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
       margin: 0px;
+      padding: 0px;
       background: #4d4c47;
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
@@ -589,7 +564,9 @@ body {
 .terminal {
   position: relative;
   width: 100%;
+  min-height: 350px;
   padding: 25px 15px 25px 15px;
+  text-align: center;
   background: black;
   overflow: hidden;
   color: green;
@@ -645,37 +622,55 @@ body {
 #typewriter {
   margin: 0px;
   padding: 0px; }
-  #typewriter .cursor {
+  #typewriter .textarea {
     display: inline-block;
-    width: 4px;
-    height: 1em;
-    background: green;
-    animation: bg-blinking .5s step-end infinite; }
-  #typewriter .btn {
-    display: block;
-    margin: auto;
-    padding: 1px 5px 1px 5px;
-    font-size: 0.75em;
-    text-decoration: none;
-    color: green; }
-  #typewriter .btn:hover {
-    opacity: 0.8; }
+    margin: 0px;
+    padding: 0px;
+    width: 90%;
+    min-height: 175px; }
+    #typewriter .textarea .cursor {
+      display: inline-block;
+      width: 4px;
+      height: 1em;
+      background: green;
+      animation: bg-blinking .5s step-end infinite; }
 @keyframes bg-blinking {
   from, to {
     opacity: 0; }
   50% {
     opacity: 1; } }
+  #typewriter hr {
+    width: 90%;
+    color: green;
+    border-bottom: 4px dashed green; }
+  #typewriter .buttonarea {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 90%;
+    text-align: left;
+    min-height: 175px; }
+    #typewriter .buttonarea .btn {
+      display: block;
+      margin: auto;
+      padding: 1px 5px 1px 5px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: green;
+      font-size: 0.75em; }
+    #typewriter .buttonarea .btn:hover {
+      border: 2px solid green; }
+
 #main-row {
   font-family: "montserratthin";
   position: relative;
-  width: 100%;
-  height: 100%;
   background: inherit;
   overflow: hidden;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; }
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.3); }
 
-#main-row:before {
+#main-row:after {
   content: '';
   position: absolute;
   top: -25px;
@@ -683,23 +678,53 @@ body {
   width: calc(100% + 50px);
   height: calc(100% + 50px);
   background: inherit;
-  box-shadow: inset 0px 0px 0px 2000px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 0px 2000px rgba(255, 255, 255, 0.1);
   filter: blur(10px); }
 
 #articlebar {
+  z-index: 1;
   margin: 0px;
   padding: 25px 15px 25px 15px;
   color: lightgrey;
   text-shadow: 1px 1px 3.5px black;
-  border-right: 1px solid rgba(50, 50, 50, 0.25); }
-  #articlebar h1 {
-    font-weight: bold; }
-  #articlebar p {
-    font-size: 2em; }
+  border-right: 1px solid rgba(50, 50, 50, 0.25);
+  font-size: 2em; }
 
-#rssbar #rss-container .rss-item {
-  text-align: left; }
-
+#rssbar {
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  color: lightgrey;
+  overflow: hidden; }
+  #rssbar .title {
+    padding: 15px auto 0px auto;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3.5px black; }
+  #rssbar hr {
+    margin-bottom: 0px; }
+  #rssbar #rss-container {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden; }
+    #rssbar #rss-container .rss-item {
+      margin: 0px;
+      padding: 15px;
+      font-size: 1.25em;
+      font-weight: bold; }
+      #rssbar #rss-container .rss-item .rss-title {
+        text-decoration: none;
+        color: #323232;
+        font-size: 1.5em; }
+    #rssbar #rss-container .rss-item:nth-child(odd) {
+      background: rgba(0, 0, 0, 0.05); }
+    #rssbar #rss-container .rss-item:hover {
+      transform: scale(1.05); }
+@keyframes expand {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.05); } }
 /* Bootstrap Direction */
 @media (min-width: 768px) {
   .carousel-caption {
@@ -711,7 +736,7 @@ body {
 @media (max-width: 991.98px) {
   .ubuntu-window .navbar {
     padding: 3.5px 1.5px 3.5px 1.5px; }
-    .ubuntu-window .navbar .collapse li a {
+    .ubuntu-window .navbar .navbar-collapse li a {
       width: 100%;
       border-radius: 10px; } }
 
