@@ -1,53 +1,4 @@
 'use strict';
-function AddNintendoButtonEvents(){
-
-    $(".nintendo-cross-button").not(".nintendo-cross-button-middle")
-        .mousedown(function(){
-            $(this).css("transform", "scale(0.95)");
-        })
-        .mouseup(function(){
-            $(this).css("transform", "scale(1.0)");
-        });
-
-    $("#nintendo-select-button")
-        .mousedown(function(){
-            $(this).css("transform", "scale(0.95)");
-        })
-        .mouseup(function(){
-            $(this).css("transform", "scale(1.0)");
-        });
-
-    $("#nintendo-start-button")
-        .mousedown(function(){
-            $(this).css("transform", "scale(0.95)");
-        })
-        .mouseup(function(){
-            $(this).css("transform", "scale(1.0)");
-        });
-
-    $(".nintendo-circle-button")
-        .mousedown(function(){
-            $(this).css("transform", "scale(0.95)");
-        })
-        .mouseup(function(){
-            $(this).css("transform", "scale(1.0)");
-        });
-
-    $(".nintendo-cross-button-left")
-        .mousedown(function(){
-            $(".carousel").carousel('prev');
-        });
-
-    $(".nintendo-cross-button-right")
-        .mousedown(function(){
-            $(".carousel").carousel('next');
-        });
-
-    $(".nintendo-circle-button-A")
-        .mousedown(function(){
-            window.location = $(".carousel-item.active > a").attr("href");
-        });
-}
 
 function showRSS(str) {
     let xmlhttp;
@@ -70,8 +21,6 @@ function showRSS(str) {
         if (this.readyState == 4 && this.status == 200) {
 
             document.getElementById("rss-container").innerHTML=this.responseText;
-
-            $("#rss-container").addClass("rss-scroll-anim");
         }
     }
 
@@ -84,77 +33,93 @@ $(document).ready(function(){
 
     let typewriter = {
         text: [
-            "User: Intruder/Password: ********",
-            "Hi, intruder! I am Donghoon Jang, a third-year student at ANU studying software engineering.",
-            "I built this blog because I thought it would be a great way of showing what I'm interested and capable of!",
-            "Here, I will post what I learn from Uni or personal projects and discuss how I worked around difficulties that I encountered.",
-            "I will mainly post updates on the two games I am working in Unity3D and also on Security!",
-            "Checkout the posts on other mini projects in the \"extra\" tab!",
-            "Just FYI, this blog was made with HTML, CSS, Bootstrap, Javascript(Jquery) and PHP on LAMP Stack on AWS!",
-            "- Blog is not complete yet (2018.09.11)-"
+            "Who's There...?",
+            "Welcome, stranger." +
+            "^Do you know what this place is about?",
+            "Fine. This place belongs to Donghoon Jang... " +
+            "^Do you know who he is?",
+            "As I heard, he's a 3rd software engineering student at Australian National University..",
+            "He frequently comes back to this place to store pieces of precious knowledge he learns from outside...",
+            "Because This place was just made, you, Moron!",
+            "Phew.. Come back and check a few days later." +
+            "^He's not as rude as I am at least..",
+            "- Old man slams the door -"
         ],
+        nextBtnText: [
+            "Umm... just looking around?",
+            "No... Mind telling me now?",
+            "Never heard of the name",
+            "So what...?",
+            "I don't see anything here..",
+            "Okay, okay. Calm down...",
+            "Sure, I will! Thanks!"
+        ],
+
         timeouts: [],
         current: 0,
         interval: 25,
         target: 'typewriter',
-        nextBtn: 'typewriter-nextbtn',
-        prevBtn: 'typewriter-prevbtn',
+        nextBtn: 'btn next',
+        prevBtn: 'btn prev',
 
         init: function (sec) {
 
             this.interval = sec;
 
-            document.getElementById(this.nextBtn).onmousedown = function(){
-                event.preventDefault();
+            document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0].onmousedown = function(){
                 typewriter.next();
                 typewriter.write();
+                event.preventDefault();
             };
 
-            document.getElementById(this.prevBtn).onmousedown = function(){
-                event.preventDefault();
+            document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0].onmousedown = function(){
                 typewriter.prev();
                 typewriter.write();
+                event.preventDefault();
             };
 
         },
 
         write: function (){
 
-            var str = this.text[this.current];
-            var elem = document.getElementById(this.target);
+            let str = this.text[this.current];
+            let strlen = str.length;
+            var elem = document.getElementById(this.target).getElementsByClassName('text')[0];
 
-            /*
+            var nextBtn = document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0];
+            var prevBtn = document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0];
+            var btnStr = this.nextBtnText[this.current];
 
-            if (this.current >= 2){
-
-                elem.innerText = "";
-
-                for (let i = 1; i < this.current; i++){
-                    var pNode = document.createElement("p");
-                    var tNode = document.createTextNode(this.text[i]);
-
-                    pNode.appendChild(tNode);
-                    elem.appendChild(pNode);
-                }
-            }
-
-            else {
-                elem.innerText = "";
-            }
-            */
+            nextBtn.innerHTML = '>_ ' + btnStr;
 
             elem.innerText = "";
 
             this._clearTimeouts();
+            this._hideBtn();
 
             for (let i = 0; i < str.length; i++){
+
+                let char = str.charAt(i);
+
                 this.timeouts.push(setTimeout(function(){
-                    elem.innerHTML = elem.innerHTML + str.charAt(i);
+
+                    if (char == "^"){
+                        elem.appendChild(document.createElement("br"));
+                    }
+
+                    else{
+                        elem.innerHTML = elem.innerHTML + char;
+                    }
+
                 }, this.interval * i));
+
+                if (i == str.length -1){
+                    this.timeouts.push(setTimeout(function(){
+                        typewriter._showBtn();
+                    }, this.interval * i + 750));
+                }
             }
 
-            this._hideBtn();
-            this._showBtn();
         },
 
         next: function() {
@@ -171,26 +136,26 @@ $(document).ready(function(){
 
         _showBtn: function(){
             if ((this.current +1) >= this.text.length){
-                document.getElementById(this.nextBtn).style.display = "none";
+                document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0].style.display = "none";
             }
 
             else {
-                document.getElementById(this.nextBtn).style.display = "inline-block";
+                document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0].style.display = "inline-block";
             }
 
 
             if ((this.current -1) < 0){
-                document.getElementById(this.prevBtn).style.display = "none";
+                document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0].style.display = "none";
             }
 
             else {
-                document.getElementById(this.prevBtn).style.display = "inline-block";
+                document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0].style.display = "inline-block";
             }
         },
 
         _hideBtn: function(){
-            document.getElementById(this.nextBtn).style.display = "none";
-            document.getElementById(this.prevBtn).style.display = "none";
+            document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0].style.display = "none";
+            document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0].style.display = "none";
         },
 
         _clearTimeouts : function(){
@@ -206,6 +171,5 @@ $(document).ready(function(){
 
     typewriter.init(25);
     typewriter.write();
-    AddNintendoButtonEvents();
     showRSS('https://www.darkreading.com/rss_simple.asp');
 });

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
 
     <!-- Style Sheet -->
-    <link href="css/style-landing.css" type= "text/css" rel="stylesheet">
+    <link href="css/style-pagebook.css" type= "text/css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,12 +31,11 @@
 
 </head>
 
-<body class="container-fluid font-press2p">
+<body class="container-fluid font-cabin">
 
-<!-- Top -->
-<div class="row m-0 px-0 justify-content-center font-cabin">
+<div class="row m-0 p-0 justify-content-center">
 
-    <div class="col-12 col-lg-10 p-0 bg-white shadow-lg" >
+    <div class="col-12 col-lg-10 m-0 p-0 bg-leaves shadow-lg">
 
         <!-- Loading Bar -->
         <div id="topbar"></div>
@@ -63,7 +62,7 @@
             </div>
         </div>
 
-        <hr class="m-2">
+        <hr class="p-0 m-0">
 
         <!-- Nav bar --><!-- Google Facebook Twitter -->
         <nav class="navbar navbar-expand-md w-100 m-0 p-0 text-capitalize font-bold" id="navbar">
@@ -152,42 +151,35 @@
             </div>
         </nav>
 
-        <!-- Introduction text -->
-        <div class="row justify-content-center m-0 px-0 py-3 bg-white">
-            <div class="col-12 col-lg-11 py-5 px-3"  id="blog-intro">
-                <h3> WELCOME TO "HASH THE BLOG" </h3>
+
+        <!-- Banner -->
+        <div class="row justify-content-center m-0 p-0 bg-white">
+            <div class="col-12 p-2 m-0 text-center" id="banner">
+                <div class="text-center"><h2 class="display-4"> UNITY3D & FIREBASE </h2></div>
                 <hr>
-                <span id="typewriter">
-    </span>
+                <span id="typewriter" class="font-1_5em">2D/3D Games made in Unity3D Plus Firebase</span>
                 <span id="typewriter-cursor" class="d-inline-block"></span>
                 <hr>
-                <div class="typewriter-btn" id="typewriter-prevbtn" style="color: white;"><- PREV</div>
-                <div class="typewriter-btn pointer" id="typewriter-nextbtn" style="color: white;">NEXT -></div>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg shadow-lg" href="#" role="button">GO TO GIT REPO -></a>
+                </p>
             </div>
         </div>
 
+        <!-- Page Book-->
+        <div class="row m-0 identify-blue" id="pagebook"></div>
+
+        <!-- Page Navigation -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
         <br/>
-        <div class="row m-0 p-0" id="about-me">
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionA">
-                <img src="" style="height: 100px; width: 100px"><br/><br/>
-                DONGHOON CHANG<br/><br/>
-                <a href="#"><img src="icon/contacts/005-facebook.png" class="icon-35"></a>
-                <a href="#"><img src="icon/contacts/004-linkedin.png" class="icon-35"></a>
-                <a href="#"><img src="icon/contacts/041-githubpng.png" class="icon-35"></a>
-            </div>
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionB">
-                School:<br/>
-                ANU<br/><br/>
-                Degree:<br>
-                B.SE(Hons)<br><br>
-                Major:<br>
-                Security<br>
-            </div>
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionC">
-                Icon Attribution
-                Background Img Attribution
-            </div>
-        </div>
     </div>
 </div>
 
@@ -199,7 +191,7 @@
 <script src="js/bootstrap.js"></script>
 
 <!-- My Javascript -->
-<script src="js/index.js"></script>
+<script src="js/pagebook.js"></script>
 
 </body>
 </html>

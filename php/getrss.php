@@ -23,9 +23,9 @@ for ($i = 0; $i < $items -> length; $i++) {
         -> getElementsByTagName('description') -> item(0) -> nodeValue;
 
     echo <<<EOD
-<div class='d-inline'>
-    <a href="{$item_link}" class="rss-title">{$item_title}</a>
-    <span class="rss-description">{$item_desc}</span>
+<div class='rss-item'>
+    <a href="{$item_link}" class="rss-title">{$item_title}</a><br/>
+    <span class="rss-desc">{$item_desc}</span>
 </div>
 EOD;
 }

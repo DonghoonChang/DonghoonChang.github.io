@@ -1,6 +1,10 @@
 $marker: 'permanent_markerregular';
 $cabin: 'cabinregular';
 $press-start-2p: 'press_start_2pregular';
+$anonymous-pro: 'anonymous_proregular';
+$VT323: 'VT323';
+$ubuntu-mono: 'ubuntu_monoregular';
+$montserrat: 'montserratthin';
 
 @font-face {
     font-family: 'permanent_markerregular';
@@ -18,7 +22,31 @@ $press-start-2p: 'press_start_2pregular';
 @font-face {
   font-family: 'press_start_2pregular';
   src: url('../font/PressStart2P/pressstart2p-regular-webfont.woff2') format('woff2'),
-  url('../font/PressStart2P/pressstart2p-regular-webfont.woff') format('woff');
+       url('../font/PressStart2P/pressstart2p-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'anonymous_proregular';
+  src:   url('../font/Anonymous-pro/anonymous_pro.woff2') format('woff2'),
+         url('../font/Anonymous-pro/anonymous_pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'VT323';
+  src:   url('../font/VT323/vt323-regular-webfont.woff2') format('woff2'),
+         url('../font/VT323/vt323-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ubuntu_monoregular';
+  src:  url('../font/Ubuntu_Mono/ubuntumono-regular-webfont.woff2') format('woff2'),
+        url('../font/Ubuntu_Mono/ubuntumono-regular-webfont.woff') format('woff');
+}
+
+@font-face{
+  font-family: 'montserratthin';
+  src:  url('../font/Montserrat/montserrat-thin-webfont.woff2') format('woff2'),
+        url('../font/Montserrat/montserrat-thin-webfont.woff') format('woff');
 }
 
 @mixin font($font){
@@ -40,6 +68,10 @@ $press-start-2p: 'press_start_2pregular';
 
 .font-press2p{
   font-family: $press-start-2p, serif;
+}
+
+.font-anonymous_pro{
+  font-family: $anonymous-pro, serif;
 }
 
 /* Others */

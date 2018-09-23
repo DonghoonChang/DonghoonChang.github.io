@@ -32,6 +32,4 @@ function showRSS(str) {
 }
 
 $(document).ready(function(){
-
-    showRSS('https://www.darkreading.com/rss_simple.asp');
 });

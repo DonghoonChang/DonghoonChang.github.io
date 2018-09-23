@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
 
     <!-- Style Sheet -->
-    <link href="css/style-landing.css" type= "text/css" rel="stylesheet">
+    <link href="css/style.css" type= "text/css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,372 +30,215 @@
     <![endif]-->
 
 </head>
+<body class="container-fluid font-cabin p-0">
 
-<body class="container-fluid font-press2p">
+<div class="row m-0 p-0 justify-content-center bg-inherit">
+    <div class="col-12 col-lg-10 m-0 p-0 bg-inherit" id="test">
+        <br class="d-none d-lg-block"/>
 
-<!-- Top -->
-<div class="row m-0 px-0 justify-content-center font-cabin">
-
-    <div class="col-12 col-lg-10 p-0 bg-white shadow-lg" >
-
-        <!-- Loading Bar -->
-        <div id="topbar"></div>
-        <!-- Logo bar -->
-        <div class="row justify-content-center align-items-center font-bold" id="logobar">
-            <!-- Logo -->
-            <div class="col-auto col-md-6 text-center">
-                <div class="rounded" id="logobox">
-                    <a href="#" class="font-3em" id="logotext">
-                        &nbsp;&nbsp;<span class="logocharC">H</span><!--
-            --><span class="logocharA">A</span><!--
-            --><span class="logocharB">S</span><!--
-            --><span class="logocharC">H</span><!--
-            --><span class="logocharA">T</span><!--
-            --><span class="logocharD">H</span><!--
-            --><span class="logocharB">E</span><!--
-            --><span class="logocharE">B</span><!--
-            --><span class="logocharF">L</span><!--
-            --><span class="logocharD">O</span><!--
-            --><span class="logocharC">G</span>&nbsp;&nbsp;
-                    </a>
-                </div>
+        <div class="ubuntu-window">
+            <div class="topbar">
+                <a href="#" class='btn close' func-target="carousel">&#10005;</a>
+                <a href="#" class='btn min'>&#9472;</a>
+                <a href="#" class='btn max'>&#9723;</a>
+                <a href="#" class="title">HASHTHEBLOG</a>
             </div>
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-caret-square-down"></i>&nbsp;Toggle
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="fas fa-home"></i>&nbsp;Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link about-me" href="#"><i class="fas fa-user"></i>&nbsp;About Me</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-folder"></i>&nbsp;Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Unity & Firebase</a>
+                                <a class="dropdown-item" href="#">Security</a>
+                                <a class="dropdown-item" href="#">Others</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#"><i class="fas fa-key"></i>&nbsp;Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-
-        <hr class="m-2">
-
-        <!-- Nav bar --><!-- Google Facebook Twitter -->
-        <nav class="navbar navbar-expand-md w-100 m-0 p-0 text-capitalize font-bold" id="navbar">
-
-            <!-- Collapse button -->
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <i class="fas fa-align-justify fa-lg" ></i>
-            </span>
-            </button>
-
-            <!-- Collapsible items -->
-            <div class="collapse navbar-collapse py-1" id="navbarSupportedContent" >
-
-                <!-- Nav bar item list -->
-                <ul class="navbar-nav w-100">
-
-                    <!-- Home -->
-                    <li class="nav-item active m-auto font-1_375em ">
-                        <a class="nav-link m-0 p-1 clickable text-dark" href="#">
-                            <img src="icon/contacts/009-home.png" class="icon-35">
-                            <span class="text-vertical-center ">HOME</span>
-                            <span class="sr-only">
-                        (current)
-                    </span>
-                        </a>
-                    </li>
-
-                    <!-- About Me -->
-                    <li class="nav-item m-auto font-1_5em ">
-                        <a class="nav-link m-0 p-1 clickable text-dark" href="#">
-                            <img src="icon/contacts/031-man-1.png" class="icon-35">
-                            <span class="text-vertical-center">ABOUT ME</span>
-                        </a>
-                    </li>
-
-                    <!-- Projects -->
-                    <li class="nav-item dropdown m-auto font-1_375em ">
-
-                        <a class="nav-link dropdown-toggle  m-0 p-1 clickable text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="icon/contacts/011-web.png" class="icon-35">
-                            <span class="text-vertical-center">PROJECTS</span>
-                        </a>
-
-                        <div class="dropdown-menu font-0_75em" aria-labelledby="navbarDropdown">
-
-                            <a class="dropdown-item" href="pagebook-unity.html">
-                                Unity
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                Cyber Security
-                            </a>
-
-                            <div class="dropdown-divider"></div>
-
-                            <a class="dropdown-item" href="#">
-                                Algorithms
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                Extra
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                Extra Extra
-                            </a>
-
-                        </div>
-                    </li>
-
-                    <!-- Login -->
-                    <li class="nav-item m-auto font-1_375em ">
-                        <a class="nav-link m-0 p-1 clickable text-dark" href="#">
-                            <img src="icon/contacts/030-profile.png" class="icon-35">
-                            <span style="vertical-align: middle; height: 200px;" class="p-0 m-0">LOG-IN</span>
-                        </a>
-                    </li>
-
-                    <!-- Share -->
-                    <li class="nav-item m-auto font-1_375em ">
-                        <a class="nav-link m-0 p-1 clickable text-dark" href="#">
-                            <img src="icon/contacts/016-share.png" class="icon-35">
-                            <span style="vertical-align: middle; height: 200px;" class="p-0 m-0">SHARE</span>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-
-        <!-- Carousel -->
-        <div class="row m-0 font-bold" id="carousel">
-            <div class="col p-0">
-
-                <!-- Background space -->
-                <div id="carousel-space" class="w-100">
-                    <div id="carousel-wall-top" class="carousel-wall"></div>
-                    <div id="carousel-wall-right" class="carousel-wall"></div>
-                    <div id="carousel-wall-bottom" class="carousel-wall"></div>
-                    <div id="carousel-wall-left" class="carousel-wall"></div>
-                    <div id="carousel-wall-middle" class="carousel-wall"></div>
-                </div>
-
-                <!-- Carousel Contents -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-                    <!-- Carousel Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Carousel Contents -->
-                    <div class="carousel-inner">
-
-                        <!-- Banner(Unity) -->
-                        <div class="carousel-item active">
-                            <a href="https://www.google.com"></a>
-                            <img class="d-block carousel-img" src="img/zombie.png" alt="First slide">
-                            <div class="carousel-caption mx-auto p-1 font-lg-1_5em">
-                                <h4 class="text-uppercase font-bold"><span class="font-grey">Unity3D</span> + <span class="font-firebase-amber">Firebase</span></h4>
-                                <hr class="m-2">
-                                <p class="text-uppercase ">Zombie Shooter +<br/>Firebase Auth & Realtime Database</p>
-                            </div>
-                        </div>
-
-                        <!-- Banner (Security) -->
-                        <div class="carousel-item">
-                            <a href="http://www.anu.edu.au"></a>
-                            <img class="d-block carousel-img" src="img/linux-penguin.png" alt="Second slide">
-                            <div class="carousel-caption mx-auto p-1 font-lg-1_5em">
-                                <h4 class="text-uppercase font-bold"><span class="font-graffiti-green">Security</span></h4>
-                                <hr class="m-2">
-                                <p class="text-uppercase m-0 font-1em">Protection Against Malicious Attacks In Linux Environment!</p>
-                            </div>
-                        </div>
-
-                        <!-- Banner (Others) -->
-                        <div class="carousel-item">
-                            <a href="#"></a>
-                            <img class="d-block carousel-img" src="img/Python-Logo.png" alt="Third slide">
-                            <div class="carousel-caption mx-auto p-1 font-lg-1_5em">
-                                <h4 class="text-uppercase font-bold"><span class="font-csharp-violet">Others</span></h4>
-                                <hr class="m-2">
-                                <p class="text-uppercase m-0 font-1em">Projects in different languages including Web Deb!</p>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content container-fluid">
+                            <div class="row h-100 m-0 p-0 align-items-center">
+                                <div class="col-12 col-md-2 m-0 p-0 d-none d-md-block">
+                                    <div class="caption-symbol">U</div>
+                                    <div class="caption-symbol-shadow">U</div>
+                                </div>
+                                <div class="col-12 col-md-7 m-0 p-0">
+                                    <div class="caption-text">
+                                        <h1>Unity</h1>
+                                        <p>3D Games to Firebase</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 m-0 p-0">
+                                    <button type="button" class="btn btn-primary text-bold caption-button">REPO</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Carousel Buttons -->
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content container-fluid">
+                            <div class="row h-100 m-0 p-0 align-items-center">
+                                <div class="col-12 col-md-2 m-0 p-0  d-none d-md-block">
+                                    <div class="caption-symbol">S</div>
+                                    <div class="caption-symbol-shadow">S</div>
+                                </div>
+                                <div class="col-12 col-md-7 m-0 p-0">
+                                    <div class="caption-text">
+                                        <h1>Security</h1>
+                                        <p>Protecting Linux System</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 m-0 p-0">
+                                    <button type="button" class="btn btn-primary caption-button">repo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content container-fluid">
+                            <div class="row h-100 m-0 p-0 align-items-center">
+                                <div class="col-12 col-md-2 m-0 p-0 d-none d-md-block">
+                                    <div class="caption-symbol">O</div>
+                                    <div class="caption-symbol-shadow">O</div>
+                                </div>
+                                <div class="col-12 col-md-7 m-0 p-0">
+                                    <div class="caption-text">
+                                        <h1>Others</h1>
+                                        <p>Mini Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 m-0 p-0">
+                                    <button type="button" class="btn btn-primary caption-button">repo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-
-        <!-- Rss Bar -->
-        <div class="row m-0 p-1 font-press2p font-bold" id="rssbar">
-            <div class="m-0 p-0" id="rss-container">
-                <a href="https://www.darkreading.com" class="rss-title">www.darkreading.com</a>
-                <span class="rss-description">Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...Dark reading articles will be loaded briefly...</span>
-            </div>
-        </div>
-
-        <!-- Nintendo Bar -->
-        <div id="nintendobar" class="row m-0 p-0 font-press2p font-bold">
-            <!-- For Tablet and Above -->
-            <!-- Cross Button -->
-            <div class="col m-0 d-none d-md-block font-grey text-center">
-                LEFT
-                <div class="nintendo-cross-button-container mx-auto d-inline-block">
-                    <div class="nintendo-cross-button nintendo-cross-button-up"></div>
-                    <div class="nintendo-cross-button nintendo-cross-button-down"></div>
-                    <div class="nintendo-cross-button nintendo-cross-button-middle"></div>
-                    <div class="nintendo-cross-button nintendo-cross-button-left"></div>
-                    <div class="nintendo-cross-button nintendo-cross-button-right"></div>
-                </div>
-                RIGHT
-            </div>
-
-            <!-- Select and Start Button -->
-            <div id="nintendo-middle-area" class="col m-0 p-0 d-none d-md-block">
-                <div id="nintendo-middle-area-shadow"></div>
-                <div class="row h-100 justify-content-center align-items-center">
-                    <span  class="col-3 text-center font-0_75em font-bold">SELECT</span>
-                    <div class="col-2 p-0">
-                        <div id="nintendo-select-button" class="m-auto"></div>
-                    </div>
-                    <div class="col-2 p-0">
-                        <div id="nintendo-start-button" class="m-auto"></div>
-                    </div>
-                    <span class="col-3 text-center font-0_75em font-bold">START</span>
-                </div>
-            </div>
-
-            <!-- B and A Button -->
-            <div class="col m-0 p-0 d-none d-md-block">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 text-vertical-center p-0 font-0_75em font-bold">
-                        <div class="w-100">
-                            <span>HashTheBlog</span>
-                        </div>
-                        <div class="float-right">
-                            <span>B A</span>
-                        </div>
-                    </div>
-                    <div class="col-auto nintendo-button-square m-1 d-inline-block">
-                        <div class="nintendo-circle-button nintendo-circle-button-B m-auto"></div>
-                    </div>
-                    <div class="col-auto nintendo-button-square m-1 d-inline-block">
-                        <div class="nintendo-circle-button nintendo-circle-button-A m-auto"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- For Mobile -->
-            <div class="col-12 d-block d-md-none">
-                <div class="row justify-content-center">
-                    <div class="col-6">
-                        <div class="nintendo-cross-button-container m-auto">
-                            <div class="nintendo-cross-button nintendo-cross-button-up"></div>
-                            <div class="nintendo-cross-button nintendo-cross-button-down"></div>
-                            <div class="nintendo-cross-button nintendo-cross-button-middle"></div>
-                            <div class="nintendo-cross-button nintendo-cross-button-left"></div>
-                            <div class="nintendo-cross-button nintendo-cross-button-right"></div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="row justify-content-center identify-blue">
-                            B
-                            <div class="col-auto nintendo-button-square m-1 d-inline-block">
-                                <div class="nintendo-circle-button m-auto"></div>
-                            </div>
-                            A
-                            <div class="col-auto nintendo-button-square m-1 d-inline-block">
-                                <div class="nintendo-circle-button m-auto"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <br/>
-
-        <!-- Introduction text -->
-        <div class="row justify-content-center m-0 px-0 py-3 bg-white">
-            <div class="col-12 col-lg-11 py-5 px-3 text-center"  id="blog-intro">
-                <div class="text-center"><h2 class="display-4"> WELCOME TO "HASH THE BLOG" </h2></div>
-                <hr>
-                <span id="typewriter" class="font-1_5em"></span>
-                <span id="typewriter-cursor" class="d-inline-block"></span>
-                <hr>
-                <div class="typewriter-btn" id="typewriter-prevbtn" style="color: white;"><- PREV</div>
-                <div class="typewriter-btn pointer" id="typewriter-nextbtn" style="color: white;">NEXT -></div>
-            </div>
-        </div>
-
-        <!-- Card Row -->
-        <div class="row justify-content-center m-0 px-0 py-3 bg-white content-card-row">
-
-            <!-- Unity Card -->
-            <div class="col-9 col-md-3 px-2 py-3 mx-auto my-3 content-card" id="unity-card">
-                <a href="#" style="text-decoration: none; color: black;">
-                    <div class="content-card-body font-bold">
-                        <h3 class="text-center font-bold">UNITY & <span class="font-firebase-amber">FIREBASE</span>
-                        </h3>
-                        <hr>
-                        <p>2D/3D Games Made with Unity 3D And Firebase</p>
-                        <hr>
-                        <p>->&nbsp;<span class="bg-pitch-black font-white rounded p-1">&nbsp;Yes/No&nbsp;</span></p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Cyber Security Card -->
-            <div class="col-9 col-md-3 px-2 py-3 mx-auto my-3 content-card" id="security-card">
-                <a href="#" style="text-decoration: none; color: black;">
-                    <div class="content-card-body font-bold">
-                        <h3 class="text-center font-bold">
-                            <span class="font-graffiti-green font-bold">&nbsp;SECURITY</span>
-                        </h3>
-                        <hr>
-                        <p>From the Fundamentals of Cyber Security to the Advanced</p>
-                        <hr>
-                        <p>->&nbsp;<span class="bg-pitch-black font-white rounded p-1">&nbsp;Yes/No&nbsp;</span></p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Extra Card -->
-            <div class="col-9 col-md-3 px-2 py-3 mx-auto my-3 content-card" id="extra-card">
-                <a href="#" style="text-decoration: none; color: black;">
-                    <div class="content-card-body font-bold">
-                        <h3 class="text-center font-bold"><span class="font-csharp-violet">&nbsp;OTHERS</span>
-                        </h3>
-                        <hr>
-                        <p>Miscellaneous Projects Involving Including Web Dev</p>
-                        <hr>
-                        <p>-><span class="bg-pitch-black font-white rounded p-1">Yes/No</span></p>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-
         <br/>
-        <div class="row m-0 p-0" id="about-me">
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionA">
-                <img src="" style="height: 100px; width: 100px"><br/><br/>
-                DONGHOON CHANG<br/><br/>
-                <a href="#"><img src="icon/contacts/005-facebook.png" class="icon-35"></a>
-                <a href="#"><img src="icon/contacts/004-linkedin.png" class="icon-35"></a>
-                <a href="#"><img src="icon/contacts/041-githubpng.png" class="icon-35"></a>
-            </div>
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionB">
-                School:<br/>
-                ANU<br/><br/>
-                Degree:<br>
-                B.SE(Hons)<br><br>
-                Major:<br>
-                Security<br>
-            </div>
-            <div class="col-12 col-md-4 m-0 p-4 about-me-section text-uppercase" id="about-me-sectionC">
-                Icon Attribution
-                Background Img Attribution
+        <div class="ubuntu-window">
+            <div class="topbar">
+                <a href="#" class='btn close'>&#10005;</a>
+                <a href="#" class='btn min'>&#9472;</a>
+                <a href="#" class='btn max'>&#9723;</a>
+                <a href="#" class="title">Terminal</a>
             </div>
         </div>
+        <div class="terminal">
+            <div class="scan-line"></div>
+            <div id="typewriter">
+                <span class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor nisl, luctus ac nibh eu,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor nisl, luctus ac nibh eu,
+                </span><div class="cursor"></div><br/>
+                <a href="#typewriter" class="btn next">NEXT</a><br>
+                <a href="#typewriter" class="btn prev">&gt;_ I don't care. Good bye.</a>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="ubuntu-window">
+            <div class="topbar">
+                <a href="#" class='btn close'>&#10005;</a>
+                <a href="#" class='btn min'>&#9472;</a>
+                <a href="#" class='btn max'>&#9723;</a>
+                <a href="#" class="title">Terminal</a>
+            </div>
+        </div>
+        <div class="row m-0 p-0" id="main-row">
+            <div class="col-12 col-md-8" id="articlebar">
+                <h1 class="display-3">HASHTHEBLOG</h1>
+                <hr>
+                <p>
+                    What Does This blog Do?
+                </p>
+            </div>
+            <div class="col-12 col-md-4" id="rssbar">
+                <h1 class="title">Dark Readings</h1>
+                <div id="rss-container">
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                    <div class='rss-item'>
+                        <a href="#" class="rss-title">Sample Title Long Long Long</a><br/>
+                        <span class="rss-desc">Sample Description Even Longer Longer Longer Longer Longer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
     </div>
 </div>
 
