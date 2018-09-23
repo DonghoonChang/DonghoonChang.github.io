@@ -29,6 +29,40 @@ function showRSS(str) {
     xmlhttp.send();
 }
 
+function initUbuntuButtons(){
+    $(".btn.close").each(function(){
+
+        let dataGroup = $(this).attr("data-target-group");
+
+        $(this).click(function(event){
+            event.preventDefault();
+            $("[data-group="+ dataGroup + "]").each(function(){
+                $(this).fadeOut();
+            });
+        });
+    });
+
+    $(".btn.min").each(function(){
+
+        let dataTarget = $(this).attr("data-target");
+
+        $(this).click(function(event){
+            event.preventDefault();
+            $("#" + dataTarget).fadeOut();
+        });
+    });
+
+    $(".btn.max").each(function(){
+
+        let dataTarget = $(this).attr("data-target");
+
+        $(this).click(function(event){
+            event.preventDefault();
+            $("#" + dataTarget).fadeIn();
+        });
+    });
+}
+
 $(document).ready(function(){
 
     let typewriter = {
@@ -66,17 +100,21 @@ $(document).ready(function(){
 
             this.interval = sec;
 
-            document.getElementById(this.target).getElementsByClassName(this.nextBtn)[0].onmousedown = function(){
-                typewriter.next();
-                typewriter.write();
-                event.preventDefault();
-            };
+            document.getElementById(this.target)
+                .getElementsByClassName(this.nextBtn)[0]
+                .addEventListener('click', (event) => {
+                    typewriter.next();
+                    typewriter.write();
+                    event.preventDefault();
+                });
 
-            document.getElementById(this.target).getElementsByClassName(this.prevBtn)[0].onmousedown = function(){
-                typewriter.prev();
-                typewriter.write();
-                event.preventDefault();
-            };
+            document.getElementById(this.target)
+                .getElementsByClassName(this.prevBtn)[0]
+                .addEventListener('click', (event) => {
+                    typewriter.prev();
+                    typewriter.write();
+                    event.preventDefault();
+                });
 
         },
 
@@ -172,4 +210,6 @@ $(document).ready(function(){
     typewriter.init(25);
     typewriter.write();
     showRSS('https://www.darkreading.com/rss_simple.asp');
+    initUbuntuButtons();
+
 });

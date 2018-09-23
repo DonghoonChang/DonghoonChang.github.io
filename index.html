@@ -36,12 +36,13 @@
     <div class="col-12 col-lg-10 m-0 p-0 bg-inherit" id="test">
         <br class="d-none d-lg-block"/>
 
-        <div class="ubuntu-window">
+        <!-- First Window (data-group=window-a) -->
+        <div class="ubuntu-window" data-group="window-a">
             <div class="topbar">
-                <a href="#" class='btn close' func-target="carousel">&#10005;</a>
-                <a href="#" class='btn min'>&#9472;</a>
-                <a href="#" class='btn max'>&#9723;</a>
-                <a href="#" class="title">HASHTHEBLOG</a>
+                <a href="#" class='btn close' data-target-group="window-a" >&#10005;</a>
+                <a href="#" class='btn min' data-target="carousel">&#9472;</a>
+                <a href="#" class='btn max' data-target="carousel">&#9723;</a>
+                <a href="#" class="title">Hash The Blog</a>
             </div>
             <nav class="navbar navbar-expand-md">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +73,7 @@
                 </div>
             </nav>
         </div>
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-group="window-a" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>
@@ -152,17 +153,18 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <br/>
-        <br/>
-        <div class="ubuntu-window">
+        <br data-group="window-a"/>
+        <br data-group="window-a"/>
+        <!-- First Window (data-group=window-b) -->
+        <div class="ubuntu-window" data-group="window-b">
             <div class="topbar">
-                <a href="#" class='btn close'>&#10005;</a>
-                <a href="#" class='btn min'>&#9472;</a>
-                <a href="#" class='btn max'>&#9723;</a>
+                <a href="#" class='btn close' data-target-group="window-b">&#10005;</a>
+                <a href="#" class='btn min' data-target="terminal">&#9472;</a>
+                <a href="#" class='btn max' data-target="terminal">&#9723;</a>
                 <a href="#" class="title">Terminal</a>
             </div>
         </div>
-        <div class="terminal">
+        <div class="terminal" id="terminal" data-group="window-b">
             <div class="scan-line"></div>
             <div id="typewriter">
                 <span class="text">
@@ -173,17 +175,18 @@
                 <a href="#typewriter" class="btn prev">&gt;_ I don't care. Good bye.</a>
             </div>
         </div>
-        <br/>
-        <br/>
-        <div class="ubuntu-window">
+        <br data-group="window-b"/>
+        <br data-group="window-b"/>
+        <!-- First Window (data-group=window-c) -->
+        <div class="ubuntu-window" data-group="window-c">
             <div class="topbar">
-                <a href="#" class='btn close'>&#10005;</a>
-                <a href="#" class='btn min'>&#9472;</a>
-                <a href="#" class='btn max'>&#9723;</a>
-                <a href="#" class="title">Terminal</a>
+                <a href="#" class='btn close' data-target-group="window-c">&#10005;</a>
+                <a href="#" class='btn min' data-target="main-row">&#9472;</a>
+                <a href="#" class='btn max' data-target="main-row">&#9723;</a>
+                <a href="#" class="title">Greetings!</a>
             </div>
         </div>
-        <div class="row m-0 p-0" id="main-row">
+        <div class="row m-0 p-0" id="main-row" data-group="window-c">
             <div class="col-12 col-md-8" id="articlebar">
                 <h1 class="display-3">HASHTHEBLOG</h1>
                 <hr>
@@ -237,8 +240,8 @@
                 </div>
             </div>
         </div>
-        <br/>
-        <br/>
+        <br data-group="window-c"/>
+        <br data-group="window-c"/>
     </div>
 </div>
 
