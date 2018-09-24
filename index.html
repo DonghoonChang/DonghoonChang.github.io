@@ -33,7 +33,36 @@
 <body class="container-fluid font-cabin p-0">
 
 <div class="row m-0 p-0 justify-content-center bg-inherit">
-    <div class="col-12 col-lg-10 m-0 p-0 bg-inherit" id="test">
+
+    <!-- Iconsbar -->
+    <div id="iconbar" class="d-none d-md-block">
+        <div class="handle"></div>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Home">
+            <img src="img/icon/home.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="About Me">
+            <img src="img/icon/about-me.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Unity & Firebase">
+            <img src="img/icon/unity.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Cyber Security">
+            <img src="img/icon/security.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Other Projects">
+            <img src="img/icon/others.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Terminal">
+            <img src="img/icon/terminal.png">
+        </button>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Trash Bin">
+            <img src="img/icon/trash-bin.png">
+        </button>
+    </div>
+
+    <!-- Main -->
+    <div class="col-12 col-lg-10 m-0 p-0 bg-inherit">
+        <!-- Empty Space on Top-->
         <br class="d-none d-lg-block"/>
         <!-- First Window (data-group=window-a) -->
         <div class="ubuntu-window" data-group="window-a">
@@ -194,7 +223,7 @@
         </div>
         <div class="row m-0 p-0" id="main-row" data-group="window-c">
             <div class="col-12 col-md-8" id="articlebar">
-                <h1 class="display-3" style="font-weight: bold;">HASH THE BLOG</h1>
+                <h1 class="display-4" style="font-weight: bold;"><i class="fas fa-home"></i>&nbsp;HASH THE BLOG</h1>
                 <hr>
                 <p>
                     Welcome to my blog! I am Donghoon Chang, and I am studying bachelor of
@@ -204,7 +233,7 @@
                     will be place on security, but I will also make posts on other things I do.
                 </p>
                 <br/>
-                <h1 class="display-3" style="font-weight: bold;">UNITY AND FIREBASE</h1>
+                <h1 class="display-4" style="font-weight: bold;"><i class="fas fa-gamepad"></i>&nbsp;UNITY & <i class="fas fa-fire"></i>&nbsp;FIREBASE</h1>
                 <hr>
                 <p>
                     I first started using Unity when I joined a project making
@@ -217,7 +246,7 @@
                     using the link on the git repo, so check out for further updates!
                 </p>
                 <br/>
-                <h1 class="display-3" style="font-weight: bold;">CYBER SECURITY</h1>
+                <h1 class="display-4" style="font-weight: bold;"><i class="fas fa-user-shield"></i>&nbsp;CYBER SECURITY</h1>
                 <hr>
                 <p>
                     This is the part where most of the blog's focus will be placed on. I just started
@@ -225,7 +254,7 @@
                     future.
                 </p>
                 <br/>
-                <h1 class="display-3" style="font-weight: bold;">OTHER PROEJECTS</h1>
+                <h1 class="display-4" style="font-weight: bold;"><i class="fas fa-cogs"></i>&nbsp;OTHER PROEJECTS</h1>
                 <hr>
                 <p>
                     There are also other small-sized projects that I implemented as a hobby, or
@@ -236,7 +265,7 @@
 
             </div>
             <div class="col-12 col-md-4" id="rssbar">
-                <h1 class="title">DARK READING</h1>
+                <h1 class="title">DARK <i class="fas fa-rss"></i>READING</h1>
                 <hr>
                 <div id="rss-container">
                     <div class='rss-item'>
@@ -356,7 +385,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
 
 <!-- My Javascript -->
 <script src="js/index.js"></script>

@@ -63,7 +63,7 @@ function initUbuntuButtons(){
     });
 }
 
-$(document).ready(function(){
+$(function(){
 
     let typewriter = {
         text: [
@@ -211,5 +211,9 @@ $(document).ready(function(){
     typewriter.write();
     showRSS('https://www.darkreading.com/rss_simple.asp');
     initUbuntuButtons();
+
+    //Initialise tooltips and popovers -- Must
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
 
 });
