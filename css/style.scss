@@ -28,7 +28,7 @@ body{
   background-size: cover;
 }
 
-#iconbar{
+#launcher{
   position: fixed;
   top: 10vh;
   left: -100px;
@@ -119,9 +119,61 @@ body{
   }
 }
 
-#iconbar:hover{
+#launcher:hover{
   animation: slide-in 0.3s ease-out forwards;
   animation-delay: 0.1s;
+}
+
+#topbar{
+  width: 100%;
+  height: 35px;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(to bottom, #4d4c47 0%, #3c3b37 100%);
+  font-family: $ubuntu-mono;
+  line-height: 35px;
+
+  // Title
+  >span{
+    padding: 0px 15px 0px 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px white;
+    font-size: 1.25em;
+  }
+  // Buttons (Close All, Restore All... )
+   ul{
+     display: inline-block;
+     padding: 0px;
+     margin: 0px auto 0px auto;
+
+     li{
+       display: inline-block;
+       margin: 0px auto 0px auto;
+       color: lightgrey;
+       cursor: pointer;
+     }
+
+     li:hover{
+       color: white;
+     }
+   }
+
+  //Status
+  .status{
+    display: inline-block;
+    float: right;
+    min-width: 150px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px 15px 0px 15px;
+    color: white;
+
+    i{
+      margin: auto;
+    }
+  }
 }
 
 @keyframes slide-out {
@@ -144,7 +196,6 @@ body{
   }
 }
 
-
 .ubuntu-window{
   width: 100%;
   margin: 0px;
@@ -154,7 +205,7 @@ body{
   border-radius: 8px 8px 0px 0px;
   box-shadow: 0px -0.5rem 1rem 0.5rem rgba(0,0,0, 0.3);
 
-  .topbar{
+  .menubar{
     height: 35px;
     width: 100%;
     margin: 0px;

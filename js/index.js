@@ -63,6 +63,77 @@ function initUbuntuButtons(){
     });
 }
 
+function closeAllWindows(){
+    $(".btn.close").each(function(){
+        $(this).trigger("click");
+    });
+}
+
+function restoreAllWindows(){
+    $("[data-group]").each(function(){
+        $(this).fadeIn();
+    });
+}
+
+function minimiseAllWindows(){
+    $(".btn.min").each(function(){
+        $(this).trigger("click");
+    });
+}
+
+function maximiseAllWindows(){
+    $(".btn.max").each(function(){
+        $(this).trigger("click");
+    })
+}
+
+function initTopbarButtons(){
+    $("#close-all").click(function(){
+        closeAllWindows();
+    });
+
+    $("#restore-all").click(function(){
+        restoreAllWindows();
+    })
+
+    $("#minimise-all").click(function(){
+       minimiseAllWindows();
+    });
+
+    $("#maximise-all").click(function () {
+        maximiseAllWindows();
+    });
+}
+
+function getCurrentTime(){
+
+    let d = new Date();
+    let h = d.getHours();
+    let apm;
+
+    if (h > 12){
+        h -= 12;
+        apm = "PM";
+    }
+
+    else{
+        apm = "AM";
+    }
+
+    let m = d.getMinutes();
+
+    return h.toString() + ":" + (m < 10? "0" : "") + m.toString() + " " + apm;
+}
+
+function initClock(){
+
+    $("#clock").text(getCurrentTime());
+
+    setInterval(function(){
+        $("#clock").text(getCurrentTime());
+    }, 1000);
+}
+
 $(function(){
 
     let typewriter = {
@@ -210,10 +281,13 @@ $(function(){
     typewriter.init(25);
     typewriter.write();
     showRSS('https://www.darkreading.com/rss_simple.asp');
-    initUbuntuButtons();
 
     //Initialise tooltips and popovers -- Must
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
+
+    initUbuntuButtons();
+    initTopbarButtons();
+    initClock();
 
 });

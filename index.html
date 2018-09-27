@@ -15,9 +15,7 @@
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Style Sheet -->
     <link href="css/style.css" type= "text/css" rel="stylesheet">
@@ -32,33 +30,53 @@
 </head>
 <body class="container-fluid font-cabin p-0">
 
-<div class="row m-0 p-0 justify-content-center bg-inherit">
+<!-- Icons bar -->
+<div id="launcher" class="d-none d-lg-block">
+    <div class="handle"></div>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Home">
+        <img src="img/icon/home.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="About Me">
+        <img src="img/icon/about-me.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Unity & Firebase">
+        <img src="img/icon/unity.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Cyber Security">
+        <img src="img/icon/security.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Other Projects">
+        <img src="img/icon/others.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Terminal">
+        <img src="img/icon/terminal.png">
+    </button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Trash Bin">
+        <img src="img/icon/trash-bin.png">
+    </button>
+</div>
 
-    <!-- Iconsbar -->
-    <div id="iconbar" class="d-none d-md-block">
-        <div class="handle"></div>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Home">
-            <img src="img/icon/home.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="About Me">
-            <img src="img/icon/about-me.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Unity & Firebase">
-            <img src="img/icon/unity.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Cyber Security">
-            <img src="img/icon/security.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Other Projects">
-            <img src="img/icon/others.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Terminal">
-            <img src="img/icon/terminal.png">
-        </button>
-        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Trash Bin">
-            <img src="img/icon/trash-bin.png">
-        </button>
+<!-- Top Bar -->
+<div id="topbar" class="d-none d-lg-block">
+    <span>HashTheBlog</span>
+    <ul>
+        <li id="restore-all">Restore All</li>
+        <li id="close-all">Close All</li>
+        <li id="minimise-all">Minimise All</li>
+        <li id="maximise-all">Maximise All</li>
+        <li id="close-win">Close Window</li>
+    </ul>
+    <div class="status">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-volume-up"></i>
+        <span id="clock">4:58 PM</span>
+        <i class="fas fa-cog"></i>
     </div>
+</div>
+
+<!-- Main Content -->
+<div class="row m-0 p-0 justify-content-center bg-inherit">
 
     <!-- Main -->
     <div class="col-12 col-lg-10 m-0 p-0 bg-inherit">
@@ -66,7 +84,7 @@
         <br class="d-none d-lg-block"/>
         <!-- First Window (data-group=window-a) -->
         <div class="ubuntu-window" data-group="window-a">
-            <div class="topbar">
+            <div class="menubar">
                 <a href="#" class='btn close' data-target-group="window-a" >&#10005;</a>
                 <a href="#" class='btn min' data-target="carousel">&#9472;</a>
                 <a href="#" class='btn max' data-target="carousel">&#9723;</a>
@@ -186,7 +204,7 @@
 
         <!-- First Window (data-group=window-b) -->
         <div class="ubuntu-window" data-group="window-b">
-            <div class="topbar">
+            <div class="menubar">
                 <a href="#" class='btn close' data-target-group="window-b">&#10005;</a>
                 <a href="#" class='btn min' data-target="terminal">&#9472;</a>
                 <a href="#" class='btn max' data-target="terminal">&#9723;</a>
@@ -214,7 +232,7 @@
 
         <!-- First Window (data-group=window-c) -->
         <div class="ubuntu-window" data-group="window-c">
-            <div class="topbar">
+            <div class="menubar">
                 <a href="#" class='btn close' data-target-group="window-c">&#10005;</a>
                 <a href="#" class='btn min' data-target="main-row">&#9472;</a>
                 <a href="#" class='btn max' data-target="main-row">&#9723;</a>
